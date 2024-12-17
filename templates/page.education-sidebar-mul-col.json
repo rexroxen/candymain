@@ -1,0 +1,538 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--page",
+      "blocks": {
+        "menu_9LjH73": {
+          "type": "menu",
+          "settings": {
+            "menu": "education-sidebar"
+          }
+        }
+      },
+      "block_order": [
+        "menu_9LjH73"
+      ],
+      "settings": {
+        "page_title_enabled": true,
+        "page_width": "content"
+      }
+    },
+    "multicolumn_section_MVJagL": {
+      "type": "multicolumn-section",
+      "blocks": {
+        "item_3QqaDV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/01_small_78835242-7235-4511-810e-134e43fed55a.webp",
+            "heading": "5 th Avenue Bar",
+            "link": "shopify://products/fifth-avenue"
+          }
+        },
+        "item_fB77BC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/02_small_fa9e3063-5f71-4bc9-9665-79dfc7d664dc.webp",
+            "heading": "Almond Joy & Mounds",
+            "link": "shopify://products/almond-joy"
+          }
+        },
+        "item_3UqFCc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/03_small_b8f4d8d9-cbd9-4cc8-a68d-c28ea957d967.webp",
+            "heading": "Candy Cigarettes",
+            "link": "shopify://products/candy-cigarette-candy-stix"
+          }
+        },
+        "item_d466H6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/52_small_a776a651-3552-4c0f-91c3-c6ef2231aa46.webp",
+            "heading": "Cracker Jack",
+            "link": "shopify://products/cracker-jack-snack-bags"
+          }
+        },
+        "item_iVbmXQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/53_small_053d4b70-74b6-47ad-9f97-f85fae0b2f0e.webp",
+            "heading": "Beechnut Gum",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_C7FfeH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/54_small_9c443376-6d88-42ea-b2e5-e0936565d464.webp",
+            "heading": "Teaberry Gum",
+            "link": "shopify://products/teaberry-chewing-gum"
+          }
+        },
+        "item_gPqqht": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/04_small_31b638a3-47b8-4431-86ea-85bd31a65eda.webp",
+            "heading": "Charleston Chews",
+            "link": "shopify://products/vanilla-charleston-chew-changemakers"
+          }
+        },
+        "item_aGwTTJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/05_small_9034bd85-a87a-449b-a670-68490fe4c461.webp",
+            "heading": "Charms Squares",
+            "link": "shopify://products/charms-squares"
+          }
+        },
+        "item_bHM99i": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/06_small_3419e845-09af-4756-8a1f-e8bf9b599fb3.webp",
+            "heading": "Chocolate Babies",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_rFbGWf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/07_small_cbde129c-e90d-4951-9ba7-1a75a1f8d45b.webp",
+            "heading": "Chuckles Licorice",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_me8MyB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/08_small_5888d557-5fe6-4589-ade5-7abb533ac072.webp",
+            "heading": "Chuckles",
+            "link": "shopify://products/chuckles-assorted"
+          }
+        },
+        "item_mCK8pe": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/09_small_dd324627-3914-48ff-aada-38815ff84b7c.webp",
+            "heading": "Dots",
+            "link": "shopify://products/dots"
+          }
+        },
+        "item_UVHhMr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/10_small_00a0daea-d265-40c7-a125-dc87d00e4c87.webp",
+            "heading": "Dubble Bubble",
+            "link": "shopify://products/dubble-bubble-bubble-gum-original-tub"
+          }
+        },
+        "item_etF98T": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/11_small_e6434a67-5c47-4adb-8476-39febe9a4729.webp",
+            "heading": "Fleer Gum",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_Rgyz7y": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/12_small_38648de4-8629-491e-b989-b2d5f190c333.webp",
+            "heading": "Good & Plenty",
+            "link": "shopify://products/good-plenty"
+          }
+        },
+        "item_TQqAMT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/13_small_1523f09e-2a86-4ba0-a5b6-7a87254724d7.webp",
+            "heading": "Heath Bar",
+            "link": "shopify://products/heath-candy-bar"
+          }
+        },
+        "item_mLrWPb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/14_small_7869c347-f81c-4982-9ece-ab336bb36f3a.webp",
+            "heading": "Hershey Bars",
+            "link": "shopify://products/hershey-5-pound-milk-chocolate-bar"
+          }
+        },
+        "item_pdT8HP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/15_small_1b372bb3-e679-4e2b-97d9-ca4a87023707.webp",
+            "heading": "Hershey Kisses",
+            "link": "shopify://products/hershey-s-kisses-bulk"
+          }
+        },
+        "item_8MFwRd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/16_small_33bedb3f-cde3-4c1a-ba9b-baeda41e6715.webp",
+            "heading": "Hershey King Size",
+            "link": "shopify://products/hershey-milk-chocolate-bar-king-size"
+          }
+        },
+        "item_JLCcFE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/17_small_57e47f30-4a70-4682-b3a0-2f9f52456f08.webp",
+            "heading": "Hollywood Candy Offerings",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_ifxrtW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/18_small_e0ffd6e8-e733-4b75-9e58-f581b7d7261c.webp",
+            "heading": "Jawbreakers",
+            "link": "shopify://products/jawbreakers-medium-box"
+          }
+        },
+        "item_9ydgLD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/19_small_e18b371b-9c8c-46f1-85f0-52cc5f82efb2.webp",
+            "heading": "Jujyfruits",
+            "link": "shopify://products/jujyfruits"
+          }
+        },
+        "item_GCeEir": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/20_small_ae21299c-f3d1-4d50-885f-2c2d3cf50cc6.webp",
+            "heading": "Pom Poms",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_e4KwXR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/20_small_ae21299c-f3d1-4d50-885f-2c2d3cf50cc6.webp",
+            "heading": "Junior Mints",
+            "link": "shopify://products/junior-mints"
+          }
+        },
+        "item_Cpbyxx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/22_small_e837240c-0451-4d93-b957-f8b230995106.webp",
+            "heading": "Kraft Vanilla Caramels",
+            "link": "shopify://products/vanilla-caramels"
+          }
+        },
+        "item_jmhxEg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/23_small_d00a4069-e623-4a3a-a694-47d9dc7a8a77.webp",
+            "heading": "Life Savers",
+            "link": "shopify://products/life-savers-5-flavors"
+          }
+        },
+        "item_RtNzT6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/24_small_9fda7df3-a62b-4df4-a34f-71e8db188679.webp",
+            "heading": "Lifesavers",
+            "link": ""
+          }
+        },
+        "item_GUWnWd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/25_small_d32d4b30-f79e-4b8b-87ac-3ded8d54ad68.webp",
+            "heading": "M&M Mars Offerings",
+            "link": ""
+          }
+        },
+        "item_9aHA9M": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/26_small_15582be9-f974-49fa-8557-e7b9fb085fdd.webp",
+            "heading": "Milky Way Bar",
+            "link": "shopify://products/milky-way-bar"
+          }
+        },
+        "item_3thEjd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/27_small_5b51ed11-817d-40f2-915c-6e527352ecc0.webp",
+            "heading": "Necco Wafers",
+            "link": "shopify://products/necco-wafers-assorted"
+          }
+        },
+        "item_XGfPbG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/28_small_f62de363-0a39-4f61-a10a-f7fc24f2b548.webp",
+            "heading": "Nestles Crunch",
+            "link": "shopify://products/nestle-s-crunch-bar"
+          }
+        },
+        "item_bqjMBf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/29_small_ba91315b-098c-4792-ac05-39c6e49742e0.webp",
+            "heading": "Nickel Naks",
+            "link": ""
+          }
+        },
+        "item_xchCkF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/30_small_ae7b964c-a305-48d4-9c47-2b3d1bd990a2.webp",
+            "heading": "Nickle Nak Prouducts",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_NzwEE8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/31_small_dbd4c693-56c0-4452-b2b6-cb26a111e0ed.webp",
+            "heading": "Nestles Chocolate",
+            "link": "shopify://products/nestle-s-milk-chocolate-bar"
+          }
+        },
+        "item_j9HbW6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/32_small_189dd959-e2a0-421c-97ed-8384e427d375.webp",
+            "heading": "PayDay Bar",
+            "link": "shopify://products/payday-bar"
+          }
+        },
+        "item_4ewcJg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/33_small_7dab2fab-d7e5-419d-ae05-7b49c56c04b3.webp",
+            "heading": "Peak Bar",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_tFcgiG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/34_small_d5a3a465-70a4-4751-9bfc-4d305ffb315e.webp",
+            "heading": "Pecan Pete",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_X6NmiY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/35_small_14305451-e06c-4b2d-b702-066087f881f9.webp",
+            "heading": "Peppermint Lozenges",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_hErxaX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/36_small_11b84d13-9af6-4c8c-b8bd-fa6f06948d95.webp",
+            "heading": "Pez Refills",
+            "link": "shopify://products/pez-candy-refill-multipack"
+          }
+        },
+        "item_ENTtXT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/37_small_cb5379e8-1aff-4c7a-8175-679adc6ca32e.webp",
+            "heading": "Ping Bars",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_6UBDUY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/38_small_b98ead22-df16-4e79-a70f-4ed9d583db1a.webp",
+            "heading": "Reese Peanut Butter Cups",
+            "link": "shopify://products/reese-s-peanut-butter-cup"
+          }
+        },
+        "item_aEeGy7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/39_small_bfd73698-d937-4fa0-a72b-f2171077d38d.webp",
+            "heading": "Rockwood Silver Cups",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_fAQnLQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/40_small_e3c6e613-351c-42f0-8189-b15b2de19524.jpg",
+            "heading": "Seven Up Bar",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_Tw63gh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/41_small_9fa50513-3b8a-4db8-bc7b-d4189b366f16.jpg",
+            "heading": "Skippers Bubble Gum",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_f6Gmcp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/42_small_5ab783b5-8f2e-4b74-9edf-79cd7036a790.jpg",
+            "heading": "Snirkles Caramel Bar",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_yJQ9YG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/43_small_2b0eca1c-ae80-4d39-ba6a-888656f2c182.jpg",
+            "heading": "Stark Wafers",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_pzFcKF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/44_small_a3fe4f0a-2b37-43fb-8ecc-37956311b5ed.jpg",
+            "heading": "Sugar Babies",
+            "link": "shopify://products/sugar-babies"
+          }
+        },
+        "item_j7z9m8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/45_small_3d4c9036-3ce1-4b76-9869-74a10e8845c0.jpg",
+            "heading": "Sugar Daddy",
+            "link": "shopify://products/sugar-daddy"
+          }
+        }
+      },
+      "block_order": [
+        "item_3QqaDV",
+        "item_fB77BC",
+        "item_3UqFCc",
+        "item_d466H6",
+        "item_iVbmXQ",
+        "item_C7FfeH",
+        "item_gPqqht",
+        "item_aGwTTJ",
+        "item_bHM99i",
+        "item_rFbGWf",
+        "item_me8MyB",
+        "item_mCK8pe",
+        "item_UVHhMr",
+        "item_etF98T",
+        "item_Rgyz7y",
+        "item_TQqAMT",
+        "item_mLrWPb",
+        "item_pdT8HP",
+        "item_8MFwRd",
+        "item_JLCcFE",
+        "item_ifxrtW",
+        "item_9ydgLD",
+        "item_GCeEir",
+        "item_e4KwXR",
+        "item_Cpbyxx",
+        "item_jmhxEg",
+        "item_RtNzT6",
+        "item_GUWnWd",
+        "item_9aHA9M",
+        "item_3thEjd",
+        "item_XGfPbG",
+        "item_bqjMBf",
+        "item_xchCkF",
+        "item_NzwEE8",
+        "item_j9HbW6",
+        "item_4ewcJg",
+        "item_tFcgiG",
+        "item_X6NmiY",
+        "item_hErxaX",
+        "item_ENTtXT",
+        "item_6UBDUY",
+        "item_aEeGy7",
+        "item_fAQnLQ",
+        "item_Tw63gh",
+        "item_f6Gmcp",
+        "item_yJQ9YG",
+        "item_pzFcKF",
+        "item_j7z9m8"
+      ],
+      "settings": {}
+    },
+    "multicolumn_section_RcjtFP": {
+      "type": "multicolumn-section",
+      "blocks": {
+        "item_Bx9WNb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/46_small_ab82083b-e55b-46cb-b513-ce64181b2f3a.jpg",
+            "heading": "Switzer’s Black Licorice",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_NDDpnX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/47_small_ea390068-915d-4a27-92f1-8e230046cdb1.jpg",
+            "heading": "Tootsie Rolls",
+            "link": "shopify://products/tootsie-rolls-bulk"
+          }
+        },
+        "item_98fWcG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/49_small_f188935e-1376-4b55-9d72-713753584d36.jpg",
+            "heading": "Walnettos",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_VmbhTK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/49_small_f188935e-1376-4b55-9d72-713753584d36.jpg",
+            "heading": "Whiz Bars",
+            "link": "shopify://pages/discontinued-candies"
+          }
+        },
+        "item_UECxmE": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/50_small_716528b2-4627-43d1-8378-690f16d914ef.jpg",
+            "heading": "York Peppermint Patties",
+            "link": "shopify://products/york-peppermint-patties"
+          }
+        },
+        "item_yzQBA8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/51_small_e0d9eea4-1058-416b-a0ff-ea5bab84c882.jpg",
+            "heading": "Zero Bars",
+            "link": "shopify://products/zero-bar"
+          }
+        }
+      },
+      "block_order": [
+        "item_Bx9WNb",
+        "item_NDDpnX",
+        "item_98fWcG",
+        "item_VmbhTK",
+        "item_UECxmE",
+        "item_yzQBA8"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_section_MVJagL",
+    "multicolumn_section_RcjtFP"
+  ]
+}

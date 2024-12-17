@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/Color_BlueBanner.jpg",
+        "mobile_image_1": "shopify://shop_images/Color_BlueBanner_mobile.jpg",
+        "button_text_1": "Shop",
+        "button_url_1": "shopify://collections/root-category-color-blue-candy",
+        "image_2": "shopify://shop_images/Color_PinkBanner.jpg",
+        "mobile_image_2": "shopify://shop_images/Color_PinkBanner_mobile.jpg",
+        "button_text_2": "Shop",
+        "button_url_2": "shopify://collections/root-category-color-pink-candy",
+        "image_3": "shopify://shop_images/Color_RedBanner.jpg",
+        "mobile_image_3": "shopify://shop_images/Color_RedBanner_mobile.jpg",
+        "button_text_3": "Shop",
+        "button_url_3": "shopify://collections/root-category-color-red-candy",
+        "image_4": "shopify://shop_images/Color_RainbowBanner.jpg",
+        "mobile_image_4": "shopify://shop_images/Color_RainbowBanner_mobile.jpg",
+        "button_text_4": "Shop",
+        "button_url_4": "shopify://collections/root-category-color-rainbow-candy",
+        "image_5": "shopify://shop_images/Color_WhiteBanner.jpg",
+        "mobile_image_5": "shopify://shop_images/Color_WhiteBanner_mobile.jpg",
+        "button_text_5": "Shop",
+        "button_url_5": "shopify://collections/root-category-color-white-candy",
+        "image_6": "shopify://shop_images/Color_PurpleBanner.jpg",
+        "mobile_image_6": "shopify://shop_images/Color_PurpleBanner_mobile.jpg",
+        "button_text_6": "Shop",
+        "button_url_6": "shopify://collections/root-category-color-purple-candy",
+        "image_7": "shopify://shop_images/Color_GreenBanner.jpg",
+        "mobile_image_7": "shopify://shop_images/Color_GreenBanner_mobile2.jpg",
+        "button_text_7": "Shop",
+        "button_url_7": "shopify://collections/root-category-color-green-candy"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

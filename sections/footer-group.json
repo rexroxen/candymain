@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "newsletter_Cy3VWn": {
+      "type": "newsletter",
+      "settings": {
+        "newsletter_heading": "Sign Up For The Newsletter",
+        "newsletter_description": "<p>Well send you all the latest scoops, including bulk candy coupons, deals and new products.</p>",
+        "textAlignment": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "footer-main": {
+      "type": "footer-main",
+      "blocks": {
+        "menu_eWHxb4": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Our Story",
+            "footer_linklist": "footer-our-story"
+          }
+        },
+        "menu_h8mdpV": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Catalogs",
+            "footer_linklist": "footer-catalogs"
+          }
+        },
+        "menu_4aLycM": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Sweet Links",
+            "footer_linklist": "footer-sweet-links"
+          }
+        },
+        "menu_9dEtr8": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Service",
+            "footer_linklist": "footer-service"
+          }
+        },
+        "menu_nDzN9z": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Education",
+            "footer_linklist": "footer-education"
+          }
+        },
+        "social_XiTYrk": {
+          "type": "social",
+          "settings": {
+            "social_title": "Get connected",
+            "fb_img": "shopify://shop_images/socialmedia_icons-01.png",
+            "fb_url": "https://www.facebook.com/CandyFavorites",
+            "x_img": "shopify://shop_images/socialmedia_icons-02.png",
+            "x_url": "https://twitter.com/4candyfavorites",
+            "g_img": "shopify://shop_images/socialmedia_icons-03.png",
+            "g_url": "https://www.instagram.com/4candyfavorites/",
+            "y_img": "shopify://shop_images/socialmedia_icons-04.png",
+            "y_url": "https://www.tiktok.com/@candyfavorites.com",
+            "ins_img": "shopify://shop_images/socialmedia_icons-05.png",
+            "ins_url": "https://www.linkedin.com/company/candyfavorites-com/",
+            "pin_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_eWHxb4",
+        "menu_h8mdpV",
+        "menu_4aLycM",
+        "menu_9dEtr8",
+        "menu_nDzN9z",
+        "social_XiTYrk"
+      ],
+      "settings": {
+        "footer-logo": "shopify://shop_images/Rectangle_34624369.png",
+        "logo-text": "America's Oldest Wholesale Candy Company",
+        "logo-url": "shopify://pages/wholesale-candy",
+        "phone": "412-678-8851",
+        "email": "support@candyfavorites.com",
+        "alignment": "left",
+        "color_scheme": "dark"
+      }
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "settings": {
+        "show_methods_of_payment": true,
+        "center_content_on_desktop": true,
+        "footer_text": "",
+        "footer_text1": "<p>2008 - 2024  Selavy Ltd. dba CandyFavorites.com</p>",
+        "copy_logo": "shopify://shop_images/copyright.png",
+        "show_currency_selector": false,
+        "show_locale_selector": false,
+        "color_scheme": "dark"
+      }
+    }
+  },
+  "order": [
+    "newsletter_Cy3VWn",
+    "footer-main",
+    "footer-bottom"
+  ]
+}

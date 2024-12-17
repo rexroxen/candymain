@@ -1,0 +1,5 @@
+/*
+Generated time: November 27, 2024 07:21
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+.logo-bar{display:flex;flex-wrap:wrap;justify-content:center;row-gap:15px;column-gap:15px}@media screen and (min-width:768px){.logo-bar{column-gap:30px}}.logo-bar__item{display:inline-block;vertical-align:middle}.logo-bar__item img{max-width:100%}

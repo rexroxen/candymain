@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/HolidayPage_Banner_Christmas.jpg",
+        "mobile_image_1": "shopify://shop_images/HolidayPage_Banner_Christmas_mobile.jpg",
+        "button_text_1": "SHOP",
+        "button_url_1": "shopify://pages/christmas-candy",
+        "image_2": "shopify://shop_images/HolidayPage_Banner_Halloween.jpg",
+        "mobile_image_2": "shopify://shop_images/HolidayPage_Banner_Halloween_mobile.jpg",
+        "button_text_2": "SHOP",
+        "button_url_2": "shopify://pages/halloween-candy",
+        "image_3": "shopify://shop_images/HolidayPage_Banner_Easter.jpg",
+        "mobile_image_3": "shopify://shop_images/HolidayPage_Banner_Easter_mobile.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://pages/easter-candy",
+        "image_4": "shopify://shop_images/HolidayPage_Banner_Valentines.jpg",
+        "mobile_image_4": "shopify://shop_images/HolidayPage_Banner_Valentines_mobile.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://pages/valentine-s-day-candy",
+        "image_5": "shopify://shop_images/holiday-05_c9c39cdd-fcde-41e5-8729-89735aa86c85.webp",
+        "mobile_image_5": "shopify://shop_images/holiday-05-M.webp",
+        "button_text_5": "Shop",
+        "button_url_5": "",
+        "image_6": "shopify://shop_images/HolidayPage_Banner_MothersDay.jpg",
+        "mobile_image_6": "shopify://shop_images/HolidayPage_Banner_MothersDay_mobile_47001d23-09e2-4b16-b905-2b9b9c21403b.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://collections/root-category-holiday-candy-mothers-day-candy",
+        "image_7": "shopify://shop_images/HolidayPage_Banner_Patriotic.jpg",
+        "mobile_image_7": "shopify://shop_images/HolidayPage_Banner_Patriotic_mobile.jpg",
+        "button_text_7": "shop",
+        "button_url_7": "shopify://collections/root-category-holiday-candy-patriotic-candy"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

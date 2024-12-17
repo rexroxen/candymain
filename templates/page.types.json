@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/TypesPage_Banner_ParadeCandy.jpg",
+        "mobile_image_1": "shopify://shop_images/TypesPage_Banner_ParadeCandy_mobile.jpg",
+        "button_text_1": "SHOP",
+        "button_url_1": "shopify://collections/root-category-candy-types-non-perishable-parade-candy",
+        "image_2": "shopify://shop_images/TypesPage_Banner_AnimalCandy.jpg",
+        "mobile_image_2": "shopify://shop_images/TypesPage_Banner_AnimalCandy_mobile.jpg",
+        "button_text_2": "SHOP",
+        "button_url_2": "shopify://collections/root-category-candy-types-animals",
+        "image_3": "shopify://shop_images/TypesPage_Banner_SportsCandy.jpg",
+        "mobile_image_3": "shopify://shop_images/TypesPage_Banner_SportsCandy_mobile.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://collections/root-category-candy-types-sports-candy",
+        "image_4": "shopify://shop_images/TypesPage_Banner_FoodCandy.jpg",
+        "mobile_image_4": "shopify://shop_images/TypesPage_Banner_FoodCandy_mobile.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://collections/root-category-candy-types-food-related-candy",
+        "image_5": "shopify://shop_images/TypesPage_Banner_BearCandy.jpg",
+        "mobile_image_5": "shopify://shop_images/TypesPage_Banner_BearCandy_mobile.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://collections/root-category-candy-types-bears",
+        "image_6": "shopify://shop_images/TypesPage_Banner_FishingCandy.jpg",
+        "mobile_image_6": "shopify://shop_images/TypesPage_Banner_FishingCandy_mobile.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://collections/root-category-candy-types-gone-fishing",
+        "image_7": "shopify://shop_images/TypesPage_Banner_LiquidCandy.jpg",
+        "mobile_image_7": "shopify://shop_images/TypesPage_Banner_LiquidCandy_mobile.jpg",
+        "button_text_7": "SHOP",
+        "button_url_7": "shopify://collections/root-category-candy-types-liquid-spray-candy"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

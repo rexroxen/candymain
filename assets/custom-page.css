@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "SpecialElite-Regular";
+  src: url("https://cdn.shopify.com/s/files/1/0699/4729/3945/files/SpecialElite-Regular.ttf?v=1718165751");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://cdn.shopify.com/s/files/1/0699/4729/3945/files/Montserrat-Regular.ttf?v=1718338272");
+  font-weight: 400;
+}
+
+#about-us .grid__item--page h4 {
+    margin-top: -10px !important;
+    margin-bottom: 0px !important;
+}
+.grid__item--page h3 {
+    margin-bottom: 3px !important;
+}
+h5.citadel a {
+    color: red !important;
+    font-size: 14px;
+}
+.custom-page {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1920px !important;
+    margin: auto;
+}
+.caption-container .caption{
+  text-align:center;
+}
+.custom-page-sidebar {
+    border-radius: 7px;
+    background: url(/cdn/shop/t/2/assets/ver-line-bg.webp?v=1719472608) left top repeat-y, url(/cdn/shop/t/2/assets/hor-line-bg.webp?v=1719472595) left top repeat-x, url(/cdn/shop/t/2/assets/hor-line-bg.webp?v=1719472595) left bottom repeat-x, url(/cdn/shop/t/2/assets/ver-line-bg.webp?v=1719472608) right top repeat-y;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px 20px 15px;
+    width: 25%;
+    -ms-flex-order: 1;
+    padding-right: 15px;
+    height: 100%;
+}
+
+.template-page img {
+    text-align: center;
+}
+.custom-page-spacing {
+  padding-left: 90px !important;
+  padding-right: 90px !important;
+  padding-top: 35px;
+}
+
+.custom-content-width {
+    width: 75%;
+}
+h1.page--title.template-title {
+    text-align: left;
+    text-transform: capitalize;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+}
+.custom-page-sidebar a.animated-link--item {
+    color: #ef3f3a;
+    font-size: 18px;
+}
+.author-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.author-wrap .post-time{
+  margin:0;
+}
+.author-wrap .post-time time{
+  font-size: 18px;
+}
+.custom-page .text-link-animated h3 {
+    color: #d10029;
+    font-family: SpecialElite-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+.custom-page h1,  .custom-page h2{
+    color: #36466a;
+    font-family: SpecialElite-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/* .custom-page h2 {
+    color: #36466a;
+    font-family: SpecialElite-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+} */
+
+.custom-page h4{
+    color: #9f8780;
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 2.1rem;
+}
+
+ .rtcl-bl-imgtxt {
+    font-size: 16px;
+}
+
+.custom-page h4 a, p a {
+    color: #d10029;
+}
+
+  .custom-page ul li a {
+    color: #d10029;
+}
+
+ul.square {
+    list-style: DISC;
+}
+
+/* multicolumn */
+.custom-multicolumn {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.custom-multicolumn__item {
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  /* border: 1px solid #eaeaea; */
+  padding: 10px;
+  text-align: center;
+}
+.custom-multicolumn__image img {
+  max-width: 100%;
+  height: auto;
+}
+/*  */
+
+table.custom-table td{
+    border-bottom : none;
+    text-align : center;
+}
+
+@media screen and (max-width: 1400px){
+  .custom-page-spacing{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+@media screen and (max-width: 1024px){
+  .custom-page{ 
+    flex-direction: column;
+  }
+  .custom-content-width{
+    width: 100%;
+    padding: 0;
+  }
+  .custom-page-sidebar{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .custom-page-spacing{
+        padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .custom-page .text-link-animated h3{
+    font-size: 2rem;
+  }
+}

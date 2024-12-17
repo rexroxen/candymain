@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h2",
+            "margin_bottom": 10
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 10
+          }
+        },
+        "separator_qKq3UY": {
+          "type": "separator",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "hide_out_of_stock_variants": false,
+            "variant_style": "dropdowns",
+            "thumbnail_changes_variant": false,
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "margin_bottom": 30
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 10
+          }
+        },
+        "local_pickup_G3BLqe": {
+          "type": "local_pickup",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "product_description_ik9Hkw": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": true,
+            "icon": "none",
+            "heading": "Description",
+            "open_close_icon": "plus_minus",
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "separator_qKq3UY",
+        "options",
+        "quantity",
+        "buy_buttons",
+        "local_pickup_G3BLqe",
+        "product_description_ik9Hkw"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "image_size": "medium",
+        "image-display": "thumbnails",
+        "thumbnail_position": "left",
+        "enable_video_loop": true,
+        "app_margin_bottom": 20
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "disabled": true,
+      "settings": {
+        "enable_readmore": false
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "product-description"
+  ]
+}

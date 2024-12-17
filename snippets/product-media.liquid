@@ -1,0 +1,226 @@
+{% comment %}
+  Renders media for product page and featured product sections
+
+  Accepts:
+    - product: The product object
+    - section_id: The section ID (required)
+    - style: The style of the product media (full_width, stacked, or grid)
+    - thumbnail_position: The position of the thumbnails (left, right, or bottom)
+    - hide_out_of_stock_variants: Whether to hide out of stock variants
+    - change_variant_based_on_thumbnail: Whether to change the variant based on the thumbnail selected
+    - enable_video_loop: Whether to enable video loop
+    - first_3d_model: The first 3D model object
+
+  Usage:
+    {% render 'product-media', product: product, style: style, section_id: section.id, thumbnail_position: section.settings.thumbnail_position, hide_out_of_stock_variants: options_block.settings.hide_out_of_stock_variants %}
+{% endcomment %}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'component-product-media.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="product-media"></script>
+</safe-load-scripts>
+
+{% assign crop_setting = settings.product-grid %}
+{% assign image_crop = nil %}
+{% if crop_setting == "square" %}
+    {% assign image_crop = "aspect-ratio--square" %}
+{% elsif crop_setting == "tall" %}
+    {% assign image_crop = "aspect-ratio--tall" %}
+{% elsif crop_setting == "wide" %}
+    {% assign image_crop = "aspect-ratio--wide" %}
+{% endif %}
+
+<product-media 
+  class="product-images-container" 
+  style="display:block;" 
+  data-media-style="{{ style }}" 
+  data-section-id="{{ section_id }}"
+  {% if slider_type %}
+    data-slider-type="{{ slider_type }}"
+  {% endif %}
+  data-media-count="{{ product.media.size }}"
+  data-thumbnail-position="{{ thumbnail_position }}"
+  data-selected-variant="{{ product.selected_or_first_available_variant | json | escape }}"
+  {% if change_variant_based_on_thumbnail %}
+    data-change-variant-based-on-thumbnail="true"
+  {% endif %}
+>
+  <div class="product-medias{% if style != 'full_width' %}{% unless slider_type == 'mobile' %} product-medias__with-thumbnails product-medias__with-thumbnails--{{ style }}{% endunless %}{% else %} product-medias__fullsize{% endif %}">
+    {% comment %} ============ Main Media ============ {% endcomment %}
+    <div class="product-medias__main">
+      {% if product.media.size > 0 %}
+        <div class="swiper main-media">
+          <div class="swiper-wrapper">
+            {% for media in product.media %}
+              {% if media.aspect_ratio %}
+                {% capture padding_style %}style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%"{% endcapture %}
+              {% else %}
+                {% capture padding_style %}style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%"{% endcapture %}
+              {% endif %}
+
+              <div 
+                class="swiper-slide{% if style != 'full_width' %} product-medias__primary{% endif %}{% if product.media.size == 1 %} animated fadeIn{% endif %}"
+                {%- if product.media.size > 1 -%}
+                  style="visibility:hidden;"
+                {%- endif -%}
+                data-media-id="{{ media.id }}"
+                data-media-type="{{ media.media_type }}"
+                {%- assign found = false -%}
+                {%- for variant in product.variants -%}
+                  {%- if found == false and variant.featured_media.id == media.id -%}
+                    data-variant="{{ variant | json | escape }}"
+                    {%- assign found = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              >
+                <div 
+                  data-main-media-container 
+                  data-media-type="{{ media.media_type }}"
+                  class="product-medias__media"
+                >
+                  <div{% if image_crop %} class="aspect-ratio quick-view-media {{ image_crop }}"{% endif %}>
+                    {% if media.media_type == 'image' %}
+                      <a 
+                        data-main-media-link
+                        href="{{ media.preview_image | image_url: width: 1445 }}"
+                        data-pswp-width="{{ media.width }}"
+                        data-pswp-height="{{ media.height }}"
+                        target="_blank"
+                      >
+
+                        <img
+                          class="theme-img"
+                          src="{{ media.preview_image | image_url: width: 1445 }}"
+                          alt="{% if media.alt %}{{ media.alt }}{% else %}{{ product.title }}{% endif %}"
+                          width="{{ media.width }}"
+                          height="{{ media.height }}"
+                          sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+                          loading="eager"
+                        />
+                      
+                      </a>
+                    {% else %}
+                      {% render 'deferred-media' with delayed_media: media, section_id: section_id, enable_video_loop: enable_video_loop, padding_style: padding_style, media_wrapper_classes: 'product-single__media__wrapper' %}
+                    {% endif %}
+                  </div>
+                </div>
+
+                {%- if first_3d_model -%}
+                  {%- if media.media_type == 'model' -%}
+                    <div class="button-wrap">
+                      <button
+                        type="button"
+                        aria-label="{{ 'products.product.view_in_space_label' | t }}"
+                        class="btn product-medias__view-in-space"
+                        data-shopify-xr
+                        data-shopify-model3d-id="{{ first_3d_model.id }}"
+                        data-shopify-title="{{ product.title | escape }}"
+                        data-shopify-xr-hidden
+                      >
+                        {{ 'products.product.view_in_space' | t }}
+                      </button>
+                    </div>
+                  {%- endif -%}
+
+                  <script type="application/json" id="ProductJSON-{{ product.id }}">
+                    {{ product.media | where: 'media_type', 'model' | json }}
+                  </script>
+                {%- endif -%}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination {% unless slider_type == 'mobile' %}large-hide{% endunless %}{% if product.media.size == 1 %} hidden{% endif %}"></div>
+        </div>
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'icon icon--placeholder' }}
+      {% endif %}
+
+      <noscript>
+        {% comment %}Big image when JS is not there to show media{% endcomment %}
+        {% if product.media.size > 0 %}
+          <img class="theme-img" src="{{ product.media[0].preview_image | image_url: width: 1000 }}" alt="{{ product.media[0].alt }}" loading="lazy" />
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag: 'icon icon--placeholder' }}
+        {% endif %}
+      </noscript>
+    </div>
+
+    {% comment %} ============ Thumbnails ============ {% endcomment %}
+    {% if product.media.size > 1 %}
+      <div 
+        data-thumbnail-media-container 
+        class="product-medias__thumbnails"
+      >
+        <div class="swiper thumbnail-media">
+          <div class="swiper-wrapper">
+            {% for media in product.media %}
+              {% comment %}
+                If this media is assigned to any variant that is available, keep showing the thumbnail.
+                EVERY variant with this media needs to be unavailable for it to be hidden.
+              {% endcomment %}
+              {% assign hideThumb = false %}
+              {% assign mediaHasVariant = false %}
+
+              {% if hide_out_of_stock_variants %}
+                {% assign hideThumb = true %}
+                {% for variant in product.variants %}
+                  {% if variant.featured_media.id == media.id %}
+                    {% assign mediaHasVariant = true %}
+                    {% if variant.available %}
+                      {% assign hideThumb = false %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              <div 
+                class="swiper-slide" 
+                style="visibility:hidden;"
+                data-media-id="{{ media.id }}"
+                {%- assign found = false -%}
+                {%- for variant in product.variants -%}
+                  {%- if found == false and variant.featured_media.id == media.id -%}
+                    data-variant="{{ variant | json | escape }}"
+                    {%- assign found = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              >
+                {% unless hideThumb and mediaHasVariant %}
+                  <div class="product-medias__thumbnail">
+                    {% if media.media_type == 'model' %}
+                      <div class="product-medias__emblem">
+                        {% comment %} {% render 'theme-icon' with icon: 'cube', iconSize: 20 %} {% endcomment %}
+                      </div>
+                    {% elsif media.media_type == 'video' or media.media_type == 'external_video' %}
+                      <div class="product-medias__emblem">
+                        {% render 'theme-icon' with icon: 'play', iconSize: 20 %}
+                      </div>
+                    {% endif %}
+
+                    {% capture props %}
+                      data-image-id="{{ media.id }}"
+                      data-max-width="{{ media.preview_image.width }}"
+                    {% endcapture %}
+                    {% capture styles %}max-width: {{ media.preview_image.width }}px;{% endcapture %}
+                    {% capture class %}
+                      product-medias__thumbnail__image product-medias__thumbnail--{{ media.media_type }}
+                    {% endcapture %}
+                    {% capture thumbalt %}
+                      {% if media.media_type == 'video' or media.media_type == 'external_video' %}
+                        {{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                      {% elsif media.media_type == 'model' %}
+                        {{ 'products.product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                      {% else %}
+                        {{ media.alt }}
+                      {% endif %}
+                    {% endcapture %}
+                    {% render 'responsive-image' with media.preview_image, class: class, alt: thumbalt | escape, default_size: '300x', props: props, blur: false, styles: styles %}
+                    </div>
+                {% endunless %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</product-media>

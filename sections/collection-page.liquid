@@ -1,0 +1,361 @@
+<div class="collection-page_wrapper width--content">
+ <div class="title-wrap">
+  <h1>{{ page.title }}</h1>
+</div>
+<div class="col-block-wrap">
+  <div class="left-block desktop-image">
+  {% assign page_handle = "page-" | append: page.handle %}
+    <ul style="{% if linklists[page_handle].links == blank %}display: none;{% endif %}">
+      {% for link in linklists[page_handle].links %} 
+        {% assign sub_collection = link.object %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a>
+    </li> {% endfor %}
+    </ul>
+  </div>
+  <div class="right-block">
+
+    {% assign images_1 = section.settings.image_1 %}
+    {% assign mobile_images_1 = section.settings.mobile_image_1 %}
+    {% assign url_1 = section.settings.button_url_1 %}
+    {% assign images_2 = section.settings.image_2 %}
+    {% assign mobile_images_2 = section.settings.mobile_image_2 %}
+    {% assign url_2 = section.settings.button_url_2 %}
+    {% assign images_3 = section.settings.image_3 %}
+    {% assign mobile_images_3 = section.settings.mobile_image_3 %}
+    {% assign url_3 = section.settings.button_url_3 %}
+    {% assign images_4 = section.settings.image_4 %}
+    {% assign mobile_images_4 = section.settings.mobile_image_4 %}
+    {% assign url_4 = section.settings.button_url_4 %}
+    {% assign images_5 = section.settings.image_5 %}
+    {% assign mobile_images_5 = section.settings.mobile_image_5 %}
+    {% assign url_5 = section.settings.button_url_5 %}
+    {% assign images_6 = section.settings.image_6 %}
+    {% assign mobile_images_6 = section.settings.mobile_image_6 %}
+    {% assign url_6 = section.settings.button_url_6 %}
+    {% assign images_7 = section.settings.image_7 %}
+    {% assign mobile_images_7 = section.settings.mobile_image_7 %}
+    {% assign url_7 = section.settings.button_url_7 %}
+
+
+    
+
+{% if images_1 != blank %}    
+  <div class="collection-main-banner">
+    <div class="image_wrapper item-num-1">
+      <a href="{{ url_1 }}">
+        <img src="{{ images_1 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_1 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_1 }}" class="common-button-border">{{ section.settings.button_text_1 }}</a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+    
+  <!-- Open div for Second and Third Images Wrap -->
+    
+  <div class="two-column-block">
+   {% if images_2 != blank %} 
+    <div class="image_wrapper item-num-2">
+      <a href="{{ url_2 }}">
+        <img src="{{ images_2 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_2 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_2 }}" class="common-button-border">{{ section.settings.button_text_2 }}</a>
+      </div>
+    </div>
+    {% endif %} 
+    {% if images_3 != blank %}
+    <div class="image_wrapper item-num-3">
+      <a href="{{ url_3 }}">
+        <img src="{{ images_3 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_3 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_3 }}" class="common-button-border">{{ section.settings.button_text_3 }}</a>
+      </div>
+    </div>
+      {% endif %}
+  </div>
+
+
+  <!-- Fourth Image in a Different Wrap -->
+  {% if images_4 != blank %}  
+  <div class="promotion-block">
+    <div class="image_wrapper item-num-4">
+      <a href="{{ url_4 }}">
+        <img src="{{ images_4 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_4 | image_url }}" alt="Image" height="380px" width="430px" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_4 }}" class="common-button-border">{{ section.settings.button_text_4 }}</a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+ <!-- Open div for Remaining Images Wrap -->
+  <div class="three-column-block">
+    {% if images_5 != blank %}
+    <div class="image_wrapper item-num-5">
+      <a href="{{ url_5 }}">
+        <img src="{{ images_5 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_5 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_5 }}" class="common-button-border">{{ section.settings.button_text_5 }}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% if images_6 != blank %}
+    {% if page.title  == 'Holiday Candy' %}
+    <div class="image_wrapper item-num-6">
+      <a href="{{ url_6 }}">
+        <img src="{{ images_6 | image_url }}" alt="Image" height="675" width="210" class="desktop-image">
+        <img src="{{ mobile_images_6 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_6 }}" class="common-button-border">{{ section.settings.button_text_6 }}</a>
+      </div>
+    </div>
+      {% else %}
+      <div class="image_wrapper item-num-6">
+      <a href="{{ url_6 }}">
+        <img src="{{ images_6 | image_url }}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_6 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_6 }}" class="common-button-border">{{ section.settings.button_text_6 }}</a>
+      </div>
+    </div>
+    {% endif %}
+   {% endif %}
+   {% if images_7 != blank %} 
+      {% if page.title  == 'Holiday Candy' %} 
+    <div class="image_wrapper item-num-7">
+      <a href="{{ url_7 }}">
+        <img src="{{ images_7 | image_url}}" alt="Image" height="675" width="210" class="desktop-image">
+        <img src="{{ mobile_images_7 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_7 }}" class="common-button-border">{{ section.settings.button_text_7 }}</a>
+      </div>
+    </div>
+        {% else %}
+      <div class="image_wrapper item-num-7">
+      <a href="{{ url_7 }}">
+        <img src="{{ images_7 | image_url}}" alt="Image" height="100%" width="100%" class="desktop-image">
+        <img src="{{ mobile_images_7 | image_url }}" alt="Image" height="100%" width="100%" class="mobile-image">
+      </a>
+      <div class="button-title">
+        <a href="{{ url_7 }}" class="common-button-border">{{ section.settings.button_text_7 }}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    <!-- Close div for Remaining Images Wrap -->
+  </div>   
+
+    
+  </div>
+  <div class="left-block mobile-image">
+  {% assign page_handle = "page-" | append: page.handle %}
+    <ul>
+      {% for link in linklists[page_handle].links %} 
+        {% assign sub_collection = link.object %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a>
+    </li> {% endfor %}
+    </ul>
+  </div>  
+  {% if page.content != blank %}
+  <div class="col-description">
+    {{ page.content }}
+  </div>
+  {% endif %}
+</div>
+</div>
+
+<style>
+
+.template-page .mobile-image {
+  display: none;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .desktop-image {
+    display: none;
+  }
+  
+  .mobile-image {
+    display: block;
+  }
+}  
+</style>
+<script>
+       $(document).ready(function() {
+            setTimeout(function() {
+                $('.right-block .button-title').css('opacity', '1');
+            }, 200);
+        });
+    </script>
+{% schema %}
+{
+  "name": "Custom Image Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_1",
+      "label": "Image 1 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_1",
+      "label": "Button Text 1",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_1",
+      "label": "Button URL 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_2",
+      "label": "Image 2 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_2",
+      "label": "Button Text 2",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "Button URL 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_3",
+      "label": "Image 3 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_3",
+      "label": "Button Text 3",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_3",
+      "label": "Button URL 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_4",
+      "label": "Image 4 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_4",
+      "label": "Button Text 4",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_4",
+      "label": "Button URL 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image 5 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_5",
+      "label": "Image 5 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_5",
+      "label": "Button Text 5",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_5",
+      "label": "Button URL 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Image 6 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_6",
+      "label": "Image 6 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_6",
+      "label": "Button Text 6",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_6",
+      "label": "Button URL 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_7",
+      "label": "Image 7 (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_7",
+      "label": "Image 7 (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "button_text_7",
+      "label": "Button Text 7",
+      "default":"SHOP"
+    },
+    {
+      "type": "url",
+      "id": "button_url_7",
+      "label": "Button URL 7"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Section",
+    }
+  ]
+}
+{% endschema %}

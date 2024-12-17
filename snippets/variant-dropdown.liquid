@@ -1,0 +1,157 @@
+{% comment %}
+  Renders a dropdown for selecting a product variant.
+
+  Accepts:
+    - option.name: The name of the option to render the dropdown for.
+    - product: The product object to render the dropdown for.
+    - size_option_name: The name of the size option.
+    - size_guide_page: The size guide page object.
+    - hide_out_of_stock_variants: A boolean to determine if out of stock variants should be hidden.
+    - dropdown_section_id: The section id (required)
+
+  Usage:
+    {%- render 'variant-dropdown' with option.name, product: product, size_option_name: size_option_name, size_guide_page: size_guide_page, hide_out_of_stock_variants: hide_out_of_stock_variants -%}
+{% endcomment %}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'component-variant-dropdown.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="variant-dropdown"></script>
+</safe-load-scripts>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign option_index = 0 %}
+
+{% for option in product.options %}
+  {% if option == variant-dropdown %}
+    {% assign option_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign hasAnyAvailableVariant = true %}
+
+{% if hide_out_of_stock_variants %}
+  {% comment %} Does this option set have ANY available variants? {% endcomment %}
+  {% assign hasAnyAvailableVariant = false %}
+
+  {% for variant in product.variants %}
+    {% assign value = variant.options[option_index] %}
+    {% assign available = variant.available %}
+
+    {% for v in product.variants %}
+      {% if v.id != variant.id and v.options[option_index] == value and v.available %}
+        {% assign hasAnyAvailableVariant = true %}
+      {% elsif variant.options.size > 0 and v.options[option_index] == value and v.available %}
+        {% assign hasAnyAvailableVariant = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% if hasAnyAvailableVariant %}
+  <variant-dropdown data-option-index="{{ option_index }}" data-url="{{ dropdown_product.url }}" data-section-id="{{ section_id }}">
+    {% if product.options_with_values.size > 0 %}
+      <div class="option-label-wrapper">
+        <label for="SingleOptionSelector-{{ option_index }}-{{ section_id }}" class="label-font">{{ variant-dropdown }}</label>
+        {%- if variant-dropdown == size_option_name and size_guide_page != blank -%}
+          <safe-load-scripts class="hidden">
+            <script src="{{ 'component-size-guide-link.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="size-guide-link"></script>
+          </safe-load-scripts>
+  
+          <size-guide-link id="size-guide" class="text-link-animated">
+            <a data-size-guide-link id="size-guide-link" tabindex="0" href="{{ size_guide_page.url }}">{{ size_guide_page.title }}</a>
+          </size-guide-link>
+        {%- endif -%}
+      </div>
+    {% endif %}
+
+    <div class="variant-dropdown">
+      <button 
+        data-dropdown-button 
+        id="SingleOptionSelector-{{ option_index }}-{{ section_id }}" 
+        type="button" 
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-controls="SingleOptionSelector-{{ option_index }}-{{ section_id }}-dropdown"
+      >
+        <span data-selected-option class="header--supporting-text">{{ current_variant.options[option_index] }}</span>
+        <span class="icon-dropdown inline-icon--wrapper">
+          {% render 'theme-icon' with icon: 'chevron_down' %}
+        </span>
+      </button>
+      <ul 
+        role="listbox"
+        data-dropdown-list style="display: none;" 
+        class="dropdown-list variant-dropdown-fade-enter" 
+        id="SingleOptionSelector-{{ option_index }}-{{ section_id }}-dropdown"
+      >
+      {% assign values = '' %}
+      {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+
+        {% comment %}Check if another variant with same value for given option is available{% endcomment %}
+        {% assign available = variant.available %}
+        {% for v in product.variants %}
+          {% if v.id != variant.id and v.options[option_index] == value and v.available %}
+            {% assign available = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign hide = false %}
+        {% if hide_out_of_stock_variants %}
+          {% if available == false %}
+            {% assign hide = true %}
+          {% endif %}
+          {% if product.options_with_values.size == 1 and available == false %}
+            {% assign hide = true %}
+          {% endif %}
+        {% endif %}
+
+        {% unless values contains value or hide %}
+
+          {% if values.size > 0 %}
+            {% assign values = values | join: '|' %}
+          {% endif %}
+          {% assign values = values | append: '|' | append: value %}
+          {% assign values = values | split: '|' %}
+
+          {%- liquid
+            assign variants_available_arr = product.variants | map: 'available'
+            assign variants_option1_arr = product.variants | map: 'option1'
+            assign variants_option2_arr = product.variants | map: 'option2'
+            assign variants_option3_arr = product.variants | map: 'option3'
+          -%}
+
+          {% assign option_available = false %}
+
+          {% for option_1 in variants_option1_arr %}
+            {% case option_index %}
+              {% when 0 %}
+                {% if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] %}
+                  {% assign option_available = true %}
+                {% endif %}
+              {% when 1 %}
+                {% if option_1 == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] %}
+                  {% assign option_available = true %}
+                {% endif %}
+              {% when 2 %}
+                {% if option_1 == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] %}
+                  {% assign option_available = true %}
+                {% endif %}
+            {% endcase %}
+          {% endfor %}
+
+          <li 
+            {% if current_variant.options[option_index] == value %}selected{% endif %} 
+            data-dropdown-option
+            class="dropdown-list--item{% unless option_available %} sold-out{% endunless %}{% if current_variant.options[option_index] == value %} selected{% endif %}"
+            data-option-value="{{ value | escape }}"
+            data-option-name="{{ variant-dropdown }}"
+            tabindex="0">
+              <span data-option-label class="option-label">{{ value }}</span>
+              {% unless option_available %}<span data-status-text class="status-text">({{ 'products.product.sold_out' | t }})</span>{% endunless %}
+          </li>
+        {% endunless %}
+      {% endfor %}
+      </ul>
+    </div>
+  </variant-dropdown>
+{% endif %}

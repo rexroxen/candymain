@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--blog",
+      "settings": {
+        "show_author_name": false,
+        "blog_show_date": true,
+        "blog-sidebar-link": "",
+        "blog-sidebar-description": "",
+        "show_blog_tags": true,
+        "show_recent_posts": false
+      }
+    },
+    "1646004249db2dcfc2": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "newsletter_heading": "Join our Mailing List",
+        "newsletter_description": "<p>Be the first to know about our biggest and best sales.</p>",
+        "textAlignment": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "accent"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646004249db2dcfc2"
+  ]
+}

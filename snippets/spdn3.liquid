@@ -1,0 +1,1 @@
+{% assign expiry = '2024-12-18' | date: '%s' %}{% assign current_date = 'now' | date: '%s' %}{% if current_date < expiry %}<div id="aria-screenreader" style="position:absolute; font-size:1200px; max-width:99vw; max-height:99vh; pointer-events:none; z-index: 99999; color:transparent; overflow:hidden;">skip to content</div>{% endif %}

@@ -1,0 +1,139 @@
+{% comment %}
+<style>
+.slider-wrapper{
+  position: relative;
+}
+</style>
+                  
+<!-- Swiper Navigation -->
+<div class="slider-wrapper" data-grid-slider-wrapper>
+<safe-load-scripts class="hidden">
+  <script src="{{ 'component-grid-slider.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="grid-slider"></script>
+</safe-load-scripts>  
+<div class="swiper-btn--wrapper small-hide swiper-btn-layout__{{ settings.hover_navigation_desktop }}">
+  <div class="swiper-button--prev btn">
+    {% render 'theme-icon', icon: 'chevron_left' %}
+  </div>
+  <div class="swiper-button--next btn">
+    {% render 'theme-icon', icon: 'chevron_right' %}
+  </div>
+</div>
+
+<!-- Swiper Container -->
+<grid-slider 
+  class="swiper main"
+  data-slides-per-view-desktop="{{ section.settings.grid_desktop }}"
+  data-slides-per-view-mobile="{{ section.settings.grid_mobile }}"
+>
+  <div class="swiper-wrapper main-wrap">
+    {% for handle in cross_sells_products %}
+      {% assign product = all_products[handle] %}
+      <div class="swiper-slide">
+        <!-- Product Card -->
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</grid-slider>
+<!-- Swiper Pagination (optional) -->
+<div class="swiper-pagination"></div>     
+</div>
+{% endcomment %}
+
+<h2>Protect Your Candy</h2>
+<div class="additional-proudcts-slider">
+    {% for handle in cross_sells_products %}
+    {% assign product = all_products[handle] %}
+    <div class="add_slide">
+    <!-- Product Card -->
+    <div class="product-card">
+      <a href="{{ product.url }}">
+       <div class="product_img"> 
+        <img src="{{ product.featured_image | img_url: 'master' }}" width="100%" height="100%" alt="{{ product.title }}">
+       </div>
+       <div class="product-content">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money }}</p>
+       </div>
+      <div class="quick-add-wrapper quick-shop--block{% if product.variants.size == 1 %} is-singular{% endif %}{% if quick_shop_mobile_only %} large-hide{% elsif quick_shop_desktop_only %} small-hide{% endif %}">
+        {% if product.variants.size > 1 and product.available %}
+            <a class="1 btn{% if settings.quick_shop_button_style == 'outline' %} btn--secondary{% endif %} quick-add-button-variants quick-add-button-variants-desktop" data-product-card-link tabindex="0" href="{{ product.url | within: collection }}">{{ 'products.product.view_options' | t }}</a>
+        {% elsif product.available %}
+          {% form 'product', product, id: "CollectionAddToCartForm" %}
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+            <button class="2 btn{% if settings.quick_shop_button_style == 'outline' %} btn--secondary{% endif %} quick-add-button quick-add-button-desktop" type="submit" tabindex="0">{{ 'products.product.add_to_cart' | t }}</button>
+          {% endform %}
+        {% else %}
+          <button class="3 btn{% if settings.quick_shop_button_style == 'outline' %} btn--secondary{% endif %} quick-add-button quick-add-button-desktop disabled" type="submit" tabindex="0">{{ 'products.product.sold_out' | t }}</button>
+{% comment %}          <a class="btn{% if settings.quick_shop_button_style == 'outline' %} btn--secondary{% endif %} sold-out-button sold-out-button-desktop disabled" tabindex="-1" href="{{ product.url | within: collection }}"><span>{{ 'products.product.sold_out' | t }}</span></a>{% endcomment %}
+        {% endif %}
+      </div>        
+      </a>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+      
+$(document).ready(function() {
+
+  $('.add_slide').each(function() {
+    var $slide = $(this);
+    var $form = $slide.find('#CollectionAddToCartForm');
+    var $message = $slide.find('.cart-message');
+
+    $form.on('submit', function(e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      var formData = $form.serialize(); // Serialize the form data
+
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js', // Shopify API endpoint for adding items to the cart
+        data: formData,
+        dataType: 'json',
+        success: function(response) {
+          $message.html('<p>Item added to cart!</p>');
+          console.log(response); // Response from Shopify
+          updateCartCount(); // Call function to update cart count
+        },
+        error: function(error) {
+          $message.html('<p>There was an error adding the item to the cart.</p>');
+          console.error('Error:', error);
+        }
+      });
+       setTimeout(function() {
+        location.reload();
+      }, 1000); 
+    });
+  });
+});
+
+
+
+
+
+      $(document).ready(function(){
+      if($(".additional-proudcts-slider .add_slide").length > 2 ) {  
+          $('.additional-proudcts-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            //autoplay: true,
+            //autoplaySpeed: 2000
+          });
+       }
+      });
+    </script>

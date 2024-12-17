@@ -1,0 +1,378 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "vendor_qJVypE": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 0
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h2",
+            "margin_bottom": 10
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h1",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 10
+          }
+        },
+        "star_rating": {
+          "type": "star_rating",
+          "settings": {
+            "show_rating_as": "average_rating",
+            "star_size": 16,
+            "show_product_rating_if_no_reviews": true,
+            "no_reviews_label": "No reviews",
+            "margin_bottom": 20
+          }
+        },
+        "separator_qKq3UY": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "a7717974-ed85-4cde-80ef-4751178acf57": {
+          "type": "text-with-icon",
+          "disabled": true,
+          "settings": {
+            "icon": "heart",
+            "text": "Use metafields to highlight unique selling points",
+            "link": "",
+            "margin_bottom": 10
+          }
+        },
+        "text_with_icon_UQ4fzi": {
+          "type": "text-with-icon",
+          "disabled": true,
+          "settings": {
+            "icon": "info",
+            "text": "Use metafields to highlight unique selling points",
+            "link": "",
+            "margin_bottom": 20
+          }
+        },
+        "separator_9XaMPT": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "hide_out_of_stock_variants": false,
+            "variant_style": "dropdowns",
+            "thumbnail_changes_variant": false,
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "margin_bottom": 30
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "2f3ddc8d-6514-403d-a884-88c9a0294300": {
+          "type": "stock-level-indicator",
+          "disabled": true,
+          "settings": {
+            "stock-level-indicator-style": "classic",
+            "bar-indicator-color": "standard",
+            "stock_indicator_animation": true,
+            "stock-range": 10,
+            "show-stock-count": false,
+            "stock-level-notice": "always",
+            "in-stock-message": "In stock",
+            "low-stock-message": "Selling fast",
+            "out-of-stock-message": "Notify me",
+            "margin_bottom": 20
+          }
+        },
+        "out_of_stock_email_form_TzFJAB": {
+          "type": "out_of_stock_email_form",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "giftwrap_RBgc7P": {
+          "type": "giftwrap",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_smart_checkout": false,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 10
+          }
+        },
+        "local_pickup_G3BLqe": {
+          "type": "local_pickup",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "product_description_ik9Hkw": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": false,
+            "icon": "info",
+            "heading": "Details",
+            "open_close_icon": "caret",
+            "margin_bottom": 0
+          }
+        },
+        "collapsible_tab_yryaXR": {
+          "type": "collapsible-tab",
+          "disabled": true,
+          "settings": {
+            "icon": "gift",
+            "heading": "Delivery",
+            "open_close_icon": "plus_minus",
+            "text": "<p>Share some information about your product</p>",
+            "page": "",
+            "open_by_default": false,
+            "margin_bottom": 40
+          }
+        },
+        "fbfe241f-1b44-41cd-ae22-e866bdad9aaf": {
+          "type": "cross-sells",
+          "disabled": true,
+          "settings": {
+            "title": "Protect Your Candy",
+            "cross_sell_product_1": "thermo-safe-insulated-package",
+            "cross_sell_product_2": "ice-packs",
+            "cross_sell_product_3": "",
+            "collapsible_tab": false,
+            "icon": "none",
+            "open_close_icon": "plus_minus",
+            "margin_bottom": 30
+          }
+        },
+        "4fdb087c-4728-4785-b270-a71a092b7898": {
+          "type": "social_sharing",
+          "disabled": true,
+          "settings": {
+            "margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "vendor_qJVypE",
+        "title",
+        "price",
+        "star_rating",
+        "separator_qKq3UY",
+        "a7717974-ed85-4cde-80ef-4751178acf57",
+        "text_with_icon_UQ4fzi",
+        "separator_9XaMPT",
+        "options",
+        "quantity",
+        "2f3ddc8d-6514-403d-a884-88c9a0294300",
+        "out_of_stock_email_form_TzFJAB",
+        "giftwrap_RBgc7P",
+        "buy_buttons",
+        "local_pickup_G3BLqe",
+        "product_description_ik9Hkw",
+        "collapsible_tab_yryaXR",
+        "fbfe241f-1b44-41cd-ae22-e866bdad9aaf",
+        "4fdb087c-4728-4785-b270-a71a092b7898"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "image_size": "medium",
+        "image-display": "thumbnails",
+        "thumbnail_position": "below",
+        "enable_video_loop": true,
+        "app_margin_bottom": 20
+      }
+    },
+    "product_featured_collection_Vfgpax": {
+      "type": "product-featured-collection",
+      "settings": {
+        "title": "Protect Your Candy",
+        "description": "",
+        "collection": "protect-your-candy",
+        "show_view_all": false,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "slider",
+        "products_to_show": 4,
+        "grid-desktop": 2,
+        "grid-mobile": "2",
+        "colors": "white"
+      }
+    },
+    "product-recommendations": {
+      "type": "template--product--recommendations",
+      "settings": {
+        "title": "Why not consider?",
+        "description": "",
+        "layout_style": "slider",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "colors": "white"
+      }
+    },
+    "1720163438fdde9440": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_pkMdQg": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_pkMdQg"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "include_margins": true
+      }
+    },
+    "text_testimonials_NgBxKr": {
+      "type": "testimonials",
+      "blocks": {
+        "text_rdFybr": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>Everything Wonderful...Fresh always, Deliver Quick. The only think was the order was large & in one bag would have liked in two bags. Recommend to everyone...Thank you Always</p>",
+            "customer_name": "Laura W.",
+            "link": "",
+            "stars": 5
+          }
+        },
+        "text_CwrjKt": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\" 2</p>",
+            "customer_name": "Ronnie",
+            "link": "",
+            "stars": 4
+          }
+        }
+      },
+      "block_order": [
+        "text_rdFybr",
+        "text_CwrjKt"
+      ],
+      "settings": {
+        "circle_images": true,
+        "bg_color": "#36466a",
+        "title": "EVERY THING WONDERFUL...FRESH ALWAYS, DELIVER",
+        "description": "",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "accent"
+      }
+    },
+    "accordion_kpya9e": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_m4iUMD": {
+          "type": "tab_content",
+          "settings": {
+            "question": "1. Q: Can I change or cancel my order after it's been placed?",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_eRErcN": {
+          "type": "tab_content",
+          "settings": {
+            "question": "2. What shipping options do you offer?",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_fQBMTX": {
+          "type": "tab_content",
+          "settings": {
+            "question": "3. What payment methods do you accept?",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_H9wanp": {
+          "type": "tab_content",
+          "settings": {
+            "question": "4. Do you offer sugar-free options?",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_iPmyiP": {
+          "type": "tab_content",
+          "settings": {
+            "question": "5. How can I contact customer service?",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_m4iUMD",
+        "tab_content_eRErcN",
+        "tab_content_fQBMTX",
+        "tab_content_H9wanp",
+        "tab_content_iPmyiP"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "description": "",
+        "faq_icon": "caret",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "light"
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "disabled": true,
+      "settings": {
+        "enable_readmore": false,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "product_featured_collection_Vfgpax",
+    "product-recommendations",
+    "1720163438fdde9440",
+    "text_testimonials_NgBxKr",
+    "accordion_kpya9e",
+    "product-description"
+  ]
+}

@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/Flavor_MarshmellowBanner.jpg",
+        "mobile_image_1": "shopify://shop_images/Flavor_MarshmellowBanner_mobile.jpg",
+        "button_text_1": "SHOP",
+        "button_url_1": "shopify://collections/root-category-flavor-marshmallow-candy",
+        "image_2": "shopify://shop_images/Flavor_FruitBanner.jpg",
+        "mobile_image_2": "shopify://shop_images/Flavor_FruitBanner_mobile.jpg",
+        "button_text_2": "SHOP",
+        "button_url_2": "shopify://collections/root-category-flavor-fruit-candy",
+        "image_3": "shopify://shop_images/Flavor_PeppermintBanner.jpg",
+        "mobile_image_3": "shopify://shop_images/Flavor_PeppermintBanner_mobile.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://collections/root-category-flavor-peppermint-candy",
+        "image_4": "shopify://shop_images/Flavor_PeanutButterBanner.jpg",
+        "mobile_image_4": "shopify://shop_images/Flavor_PeanutButterBanner_mobile.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://collections/root-category-flavor-peanut-butter-candy",
+        "image_5": "shopify://shop_images/Flavor_SourCandyBanner.jpg",
+        "mobile_image_5": "shopify://shop_images/Flavor_SourCandyBanner_mobile.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://collections/root-category-flavor-sour-candy",
+        "image_6": "shopify://shop_images/Flavor_StrawberryCandyBanner.jpg",
+        "mobile_image_6": "shopify://shop_images/Flavor_StrawberryCandyBanner_mobile.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://collections/root-category-flavor-strawberry-candy",
+        "image_7": "shopify://shop_images/Flavor_CaramelCandyBanner.jpg",
+        "mobile_image_7": "shopify://shop_images/Flavor_CaramelCandyBanner_mobile.jpg",
+        "button_text_7": "SHOP",
+        "button_url_7": "shopify://collections/root-category-flavor-caramels"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

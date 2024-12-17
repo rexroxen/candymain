@@ -1,0 +1,302 @@
+{{ 'section-accordion-with-image.min.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %} 
+  <div 
+    class="accordion-with-image-container accordion-with-image--{{ section.id }} color-scheme--{{ section.settings.colors }} wrapper-spacing--v wrapper-spacing--h" 
+    data-wetheme-section-type="collection--featured-collection" 
+    data-wetheme-section-id="{{ section.id }}"
+    style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
+  >
+    {% comment %} Section title and description {% endcomment %}
+    {% render 'dynamic-section-header' with section_title: section.settings.section_title, section_description: section.settings.section_description %}
+
+    <div class="width--content main-content-wrapper">
+      <div class="accordion-wrapper{% if section.settings.accordion_image == blank %} width--narrow{% endif %}">
+        {% for block in section.blocks %}
+          <div class="collapsible-tab js" {{ block.shopify_attributes }}>
+            <collapsible-button tabindex="0">
+                <div class="summary">
+                  {{ block.settings.accordion_header }}
+                    <span class="inline-icon--wrapper icon--right">
+                        {% if section.settings.faq_icon == "plus_minus" %}
+                            {% render 'theme-icon' with icon: 'plus', iconClasses: 'plus-icon' %}
+                            {% render 'theme-icon' with icon: 'minus', iconClasses: 'minus-icon' %}
+                        {% elsif section.settings.faq_icon == "caret" %}
+                            {% render 'theme-icon', icon: 'chevron_down', iconClasses: 'chevron-down' %}
+                        {% endif %}
+                    </span>
+                </div>
+            </collapsible-button>
+
+            <div class="collapsible-content">
+                <div class="content rte">
+                    <div class="text-link-animated">
+                      {{ block.settings.accordion_content }}
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="no-js">
+            {% comment %} Fallback html when JS is disabled. {% endcomment %}
+            <div class="collapsible-tab">
+              <details class="collapsible-tab-content">
+                <summary class="summary accordion__header" role="button" aria-expanded="false" tabindex="0">
+                    {{ block.settings.accordion_header }}
+                    <span class="inline-icon--wrapper icon--right">
+                      {% assign iconSize = 20 %}
+                      {% if section.settings.faq_icon == "plus_minus" %}
+                        {% render 'theme-icon' with icon: 'plus', iconSize: iconSize, iconClasses: 'plus-icon' %}
+                        {% render 'theme-icon' with icon: 'minus', iconSize: iconSize, iconClasses: 'minus-icon' %}
+                      {% elsif section.settings.faq_icon == "caret" %}
+                        {% render 'theme-icon', icon: 'chevron_up', iconSize: iconSize, iconClasses: 'chevron-up' %}
+                        {% render 'theme-icon', icon: 'chevron_down', iconSize: iconSize, iconClasses: 'chevron-down' %}
+                      {% endif %}
+                    </span>
+                </summary>
+                <div class="rte text-link-animated">
+                  {{ block.settings.accordion_content }}
+                </div>
+              </details>
+            </div>
+        </div>
+          <safe-load-scripts class="hidden">
+            <script src="{{ 'component-collapsible-button.js' | asset_url }}" type="module" defer="defer" data-flow-load-key="component-collapsible-button"></script>
+          </safe-load-scripts>
+        {% endfor %}
+      </div>
+  
+      {% if section.settings.accordion_image %}
+        <div class="image-wrapper">
+          <div class="content-wrapper">
+            {% unless section.settings.link == blank %}
+              <a href="{{ section.settings.link }}">
+            {% endunless %}
+              <div class="image--container">
+                {% render 'responsive-image' with section.settings.accordion_image, alt: section.settings.accordion_image.alt %}
+              </div>
+              {% unless section.settings.title == blank %}<h2 style="color: {{ section.settings.image--text-color }};">{{ section.settings.title | strip }}</h2>{% endunless %}
+              {% unless section.settings.text == blank %}<p style="color: {{ section.settings.image--text-color }};">{{ section.settings.text | strip }}</p>{% endunless %}
+              {% unless section.settings.button_text == blank %}
+                <button class="btn accordion--button" style="background-color: {{ section.settings.button_background_color }}; color: {{ section.settings.button_text_color }};" aria-label="{{ section.settings.button_text }}">
+                  {{ section.settings.button_text }}
+                </button>
+              {% endunless %}
+            {% unless section.settings.link == blank %}
+            </a>
+          {% endunless %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <style>
+    .accordion-with-image--{{ section.id }} .collapsible-tab .summary .minus-icon {
+      display: none;
+    }
+
+    .accordion-with-image--{{ section.id }} .collapsible-tab.open .summary .plus-icon {
+      display: none;
+    }
+
+    .accordion-with-image--{{ section.id }} .collapsible-tab.open .summary .minus-icon {
+      display: block;
+    }
+
+    .accordion-with-image--{{ section.id }} .content-wrapper {
+      background-color: {{ section.settings.image--background-color }};
+    }
+
+    .accordion-with-image--{{ section.id }} .accordion--button {
+      background-color: {{ section.settings.button_background_color }};
+      color: {{ section.settings.button_text_color }};
+    }
+
+    .accordion-with-image--{{ section.id }} .accordion--button:focus {
+      outline: 2px solid {{ section.settings.button_background_color }};
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.product--accordion-with-image.name",
+  "class": "accordion-with-image show-on-scroll",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "section_title",
+      "label": "t:all.Heading",
+      "default": "Share your story"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "t:all.Description"
+    },
+    {
+      "type": "radio",
+      "id": "faq_icon",
+      "label": "t:all.Icon_style",
+      "options": [
+        {
+          "value": "plus_minus",
+          "label": "t:all.Plus_minus"
+        },
+        {
+          "value": "caret",
+          "label": "t:all.Caret"
+        }
+      ],
+      "default": "plus_minus"
+    },
+    {
+      "type": "image_picker",
+      "id": "accordion_image",
+      "label": "t:all.Image_optional",
+      "info": "t:all.1400_x_1400px_recommended"
+    },
+    {
+      "type": "color",
+      "id": "image--background-color",
+      "label": "t:sections.product--accordion-with-image.settings.image--background-color.label",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "image--text-color",
+      "label": "t:sections.product--accordion-with-image.settings.image--text-color.label",
+      "default": "#333333"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:all.Heading"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:all.Description"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:all.Image_link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:all.Button_label"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "t:all.Button_text",
+      "default": "#FFFFFF",
+      "info": "t:sections.countdown-timer.settings.text_color.info"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "t:all.Button_background",
+      "default": "#242424",
+      "info": "t:sections.countdown-timer.settings.text_color.info"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "t:all.Spacing_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "t:all.Spacing_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:all.Color"
+    },
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "light",
+      "options": [
+        {
+          "value": "white",
+          "label": "t:all.Minimal"
+        },
+        {
+          "value": "light",
+          "label": "t:all.Light"
+        },
+        {
+          "value": "accent",
+          "label": "t:all.Feature"
+        },
+        {
+          "value": "dark",
+          "label": "t:all.Dark"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "t:sections.product--accordion-with-image.blocks.accordion.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_header",
+          "label": "t:sections.product--accordion-with-image.blocks.accordion.settings.accordion_header.label",
+          "default": "About us"
+        },
+        {
+          "type": "richtext",
+          "id": "accordion_content",
+          "label": "t:sections.product--accordion-with-image.blocks.accordion.settings.accordion_content.label",
+          "default": "<p>Place some content here to describe this topic.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product--accordion-with-image.presets.name",
+      "blocks": [
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "product"
+    ]
+  }
+}
+{% endschema %}

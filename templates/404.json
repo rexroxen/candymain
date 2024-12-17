@@ -1,0 +1,136 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--404",
+      "disabled": true,
+      "settings": {}
+    },
+    "gallery_jTTrhV": {
+      "type": "gallery",
+      "blocks": {
+        "image_KKmfEj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/headverheels.jpg",
+            "link": "",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_font_color": "#262428",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#242424",
+            "overlay_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_KKmfEj"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "content-position": "hide",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "section-width": "full",
+        "remove-spacing": true,
+        "full-width": false,
+        "colors": "white"
+      }
+    },
+    "rich_text_hhqF7T": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QNxRmM": {
+          "type": "heading",
+          "settings": {
+            "heading": "- The Future of Candy is Rooted in the Past -",
+            "heading--text-size": 38
+          }
+        },
+        "richtext_9LHUTN": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h2><strong>IF YOU ARE READING THIS, THE PAGE YOU ARE LOOKING FOR HAS MOVED</strong></h2><p>We've recently undergone an exciting site redesign, bringing you a new \"<em>retro</em>\" candy experience and more candy than you can imagine!</p><h2>USE THE BUTTONS  TO LOCATE YOUR FAVORITE CANDY FROM OUR EXTENSIVE SELECTION OF OVER 3000 VARIETIES!</h2><p></p><p></p>",
+            "text_size": 20
+          }
+        },
+        "button_K7pKkc": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://pages/all-candy",
+            "button_text": "SHOP OUR AMAZING CANDY SELECTION!"
+          }
+        },
+        "button_c9aGtb": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://pages/brands",
+            "button_text": "SHOP BY BRANDS"
+          }
+        },
+        "button_tedHeX": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://pages/flavors",
+            "button_text": "SHOP BY FLAVORS"
+          }
+        },
+        "button_mPeR4N": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://pages/decades",
+            "button_text": "SHOP BY DECADES"
+          }
+        },
+        "button_Wz7mCN": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://pages/holiday-candy",
+            "button_text": "SHOP BY HOLIDAYS"
+          }
+        },
+        "richtext_rRirjX": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h2></h2><h2>Candy is what we sell but SERVICE is what we deliver.</h2>",
+            "text_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "heading_QNxRmM",
+        "richtext_9LHUTN",
+        "button_K7pKkc",
+        "button_c9aGtb",
+        "button_tedHeX",
+        "button_mPeR4N",
+        "button_Wz7mCN",
+        "richtext_rRirjX"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "gallery_jTTrhV",
+    "rich_text_hhqF7T"
+  ]
+}

@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/BrandPage_Candywall.jpg",
+        "mobile_image_1": "shopify://shop_images/Brand_Candywall_375x450_d450ee64-e52d-47b2-853c-54d90aede96b.webp",
+        "button_text_1": "Shop ALL CANDY",
+        "button_url_1": "shopify://pages/all-candy",
+        "image_2": "shopify://shop_images/BrandPage_EdasBanner.jpg",
+        "mobile_image_2": "shopify://shop_images/BrandPage_EdasBanner_mobile.jpg",
+        "button_text_2": "SHOP",
+        "button_url_2": "shopify://pages/edas-sugarfree-candy",
+        "image_3": "shopify://shop_images/BrandPage_HersheysBanner.jpg",
+        "mobile_image_3": "shopify://shop_images/BrandPage_HersheysBanner_mobile.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://collections/root-category-brands-hershey-chocolates",
+        "image_4": "shopify://shop_images/BrandPage_PezBanner3.jpg",
+        "mobile_image_4": "shopify://shop_images/BrandPage_PezBanner_mobile.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://collections/root-category-all-candy-pez-dispensers",
+        "image_5": "shopify://shop_images/BrandPage_JellyBellyBanner.jpg",
+        "mobile_image_5": "shopify://shop_images/BrandPage_JellyBellyBanner_mobile.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://pages/jelly-belly-candy",
+        "image_6": "shopify://shop_images/BrandPage_HariboBanner.jpg",
+        "mobile_image_6": "shopify://shop_images/BrandPage_HariboBanner_mobile.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://collections/root-category-brands-haribo",
+        "image_7": "shopify://shop_images/BrandPage_TootsieRollBanner.jpg",
+        "mobile_image_7": "shopify://shop_images/BrandPage_TootsieRollBanner_mobile.jpg",
+        "button_text_7": "SHOP",
+        "button_url_7": "shopify://collections/root-category-brands-tootsie-roll-industries"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

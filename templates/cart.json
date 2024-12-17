@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--cart",
+      "blocks": {
+        "termbox_B6LcyX": {
+          "type": "termbox",
+          "settings": {
+            "prelink_text": "I agree to CandyFavorites.com",
+            "link_text": "Terms of Use",
+            "center_text": "and",
+            "link_text1": "Privacy Policy.",
+            "postlink_text": "",
+            "terms_page": "terms-conditions",
+            "privacy_page": "privacy-policy",
+            "checkbox_scale": 3,
+            "mandatory": true,
+            "internal_label": "Customer agreed to terms"
+          }
+        }
+      },
+      "block_order": [
+        "termbox_B6LcyX"
+      ],
+      "settings": {}
+    },
+    "1723810463e7728562": {
+      "type": "apps",
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1723810463e7728562"
+  ]
+}

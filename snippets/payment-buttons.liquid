@@ -1,0 +1,244 @@
+{% comment %}
+  Renders product buy-buttons.
+  Accepts:
+  - product: {Object} product object. (required)
+  - block: {Object} passing the block information. (optional)
+  - element_id: {String} element id. (required if it's not a block)
+  - product_form_id: {String} product form id. (required)
+  - section_id: {String} id of section to which this snippet belongs. (required)
+  - show_buy_now: {Boolean} whether to show dynamic checkout buttons. 
+  - gift_card_form_enabled: {Boolean} whether to show gift card recipient form. (required)
+
+  Usage:
+    - If it's rendered within a block context:
+      {% render 'payment-buttons' with product: product, block: block, product_form_id: product_form_id, section_id: section.id, show_buy_now: block.settings.show_smart_checkout, gift_card_form_enabled: block.settings.enable_gift_card_recipient_form %}
+    
+    - If it's rendered within a section context (eg. featured product section):
+      {% render 'payment-buttons' with product: product, element_id: section.id, product_form_id: product_form_id, section_id: section.id, show_buy_now: section.settings.show_smart_checkout, gift_card_form_enabled: section.settings.enable_gift_card_recipient_form %}
+{% endcomment %}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'component-product-form.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="product-form"></script>
+</safe-load-scripts>
+
+<div 
+  data-updates-on-change="true"
+  data-block-id="{% if block != blank %}{{ block.id }}{% else %}{{ element_id }}{% endif %}"
+  class="product-form-block" 
+  style="--custom-margin-bottom:{% if block != blank %} {{ block.settings.margin_bottom }}{% else %} 0{% endif %}px;"
+  {% if block != blank %}{{ block.shopify_attributes }}{% endif %}
+>
+  {%- if product != blank -%}
+    {%- liquid
+      assign gift_card_recipient_feature_active = false
+      if product.gift_card? and gift_card_form_enabled and product.available
+        assign gift_card_recipient_feature_active = true
+      endif
+
+      assign show_dynamic_checkout = false
+      if show_buy_now and gift_card_recipient_feature_active == false
+        assign show_dynamic_checkout = true
+      endif
+
+      assign loading_icon_attributes = 'data-loading-icon'
+    -%}
+
+    <product-form
+      class="product-form"
+      data-hide-errors="{{ gift_card_recipient_feature_active }}"
+      data-section-id="{{ section_id }}"
+      data-gift-wrap-product-id="{{ settings.giftwrap_product_selector.selected_or_first_available_variant.id }}"
+    >
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      -%}
+      
+        {% comment %} ===== Main/selected variant ID ===== {% endcomment %}
+        <input
+          data-update-item="master-variant-id"
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.available == false %}
+            disabled
+          {% endif %}
+          class="product-variant-id"
+        >
+
+        {% comment %} ===== Selected variant quantity ===== {% endcomment %}
+        <input
+          type="hidden"
+          name="quantity"
+          value="1"
+        >
+
+        {% comment %} ===== Gift card recipient form ===== {% endcomment %}
+        {%- if gift_card_recipient_feature_active -%}
+          {%- render 'gift-card-recipient-form' -%}
+        {%- endif -%}
+
+        {% comment %} ===== Quantity error message ===== {% endcomment %}
+        {% liquid 
+          assign variant_title = product.selected_or_first_available_variant.title
+          if product.has_only_default_variant
+            assign variant_title = product.title
+          endif
+        %}
+        <div 
+          data-qty-error-message
+          class="js-qty__error-message errors qty-error hidden" 
+        >
+          <span>{{ 'general.forms.quantity_max_error' | t: variant: variant_title }}</span>
+        </div>
+
+        <div class="paymentButtonsWrapper btn-wrapper-default">
+        {% unless product.available %}  
+          {% comment %} ===== Add to cart button ===== {% endcomment %}
+          {% if product.metafields.magento.custom_stock_status != blank %}
+          {% assign visibility = product.metafields.magento.custom_stock_status %}
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var sectionId = '{{ section_id }}';
+              var buttonId = 'ProductSubmitButton-' + sectionId;
+              var button = document.getElementById(buttonId);
+              var visibility = button.getAttribute('data-visibility');
+              
+              if (visibility === 'Seasonal') {
+                button.textContent = 'Seasonal Item';
+              } else if (visibility === 'Coming Soon') {
+                button.textContent = 'Coming Soon';
+                button.disabled = true; // Optional: disable the button
+              } else if (visibility === 'Discontinued') {
+                button.textContent = 'Discontinued';
+                button.disabled = true; // Optional: disable the button
+              } else if (visibility === 'Limit 2') {
+                button.textContent = 'Limit 2';
+                button.disabled = true; // Optional: disable the button
+              } else if (visibility === 'Temporarily Out of Stock') {
+                button.textContent = 'Temporarily Out of Stock';
+                button.disabled = true; // Optional: disable the button
+              } else {
+                button.textContent = 'Add to Cart';
+              }
+            });
+          </script>
+            {% endif %}
+         {% endunless %} 
+          <button
+            id="ProductSubmitButton-{{ section_id }}"
+            type="submit"
+            name="add"
+            class="btn product--add-to-cart-button {% if show_dynamic_checkout %}btn--secondary{% endif %}"
+            data-visibility="{{ visibility }}"
+            {%- if product.selected_or_first_available_variant.available == false -%}
+              disabled
+            {%- endif -%} 
+          >
+            {% comment %} ===== Add to cart/Sold out text ===== {% endcomment %}
+            <span
+              data-add-to-cart-text
+              data-update-item="add-to-cart-button"
+              data-unavailable-text="{{ 'products.product.unavailable' | t }}" 
+            >  
+              {%- if product.selected_or_first_available_variant.available == false -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+
+            {% comment %} ===== "Added" text ===== {% endcomment %}
+            <span 
+              data-cart-added-text
+              style="display: none;"
+            >
+              {{ 'products.product.added' | t }}
+            </span>
+
+            {% comment %} ===== Loading icon ===== {% endcomment %}
+            {% render 'theme-icon' with icon: 'circle-notch', iconClasses: 'spin js fa-2x hidden', iconAttributes: loading_icon_attributes, iconSize: '1.6em', icon_fill: settings.color_primary_button_text %}<span class="sr-only">{{ 'collections.paginate.loading' | t }}</span>
+          </button>
+
+          {% comment %} ===== Dynamic buttons ===== {% endcomment %}
+          {%- if show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
+          <div class="wishlist-icon">
+        
+                  <a class='st-wishlist-button' data-type='details' data-handle='{{ product.handle }}'>
+          <svg width="40" height="37" viewBox="0 0 40 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.8318 31.4525L20.0082 31.6128L20.1768 31.4443L20.3674 31.2537C25.002 27.0572 28.8654 23.5561 31.5682 20.3979C34.2694 17.2416 35.85 14.385 35.85 11.475C35.85 7.43693 32.8131 4.4 28.775 4.4C25.7349 4.4 22.7707 6.33081 21.6451 9.002H18.3549C17.2293 6.33081 14.2651 4.4 11.225 4.4C7.18693 4.4 4.15 7.43693 4.15 11.475C4.15 14.385 5.73053 17.2415 8.4293 20.3978C11.1298 23.5561 14.9886 27.0575 19.6137 31.2542L19.6173 31.2575L19.6175 31.2576L19.8318 31.4525ZM19.8103 4.96882L20 5.18986L20.1897 4.96882C22.2695 2.54561 25.4576 1 28.775 1C34.6432 1 39.25 5.58787 39.25 11.475C39.25 15.0686 37.6318 18.3578 34.7361 21.9004C31.8377 25.4464 27.6857 29.2156 22.6596 33.7733L22.6592 33.7736L20 36.1944L17.3408 33.7736L17.3404 33.7733C12.3143 29.2156 8.16226 25.4464 5.26388 21.9004C2.36824 18.3578 0.75 15.0686 0.75 11.475C0.75 5.58787 5.35677 1 11.225 1C14.5424 1 17.7305 2.54561 19.8103 4.96882Z" fill="#EF3F3A" stroke="white" stroke-width="0.5"/>
+          </svg>
+          </a>
+          </div>
+        </div>
+
+        <noscript>
+          {% comment %} ===== Quantity picker - noscript ===== {% endcomment %}
+          <div class="product-form__quantity">
+            <label for="Quantity-{{ section_id }}" class="quantity-selector product-sub-label label-font">{{ 'products.product.quantity' | t }}</label>
+            <input
+              class="quantity-noscript"
+              type="number"
+              name="quantity"
+              id="Quantity-{{ section_id }}"
+              aria-label="quantity"
+              min="1"
+              value="1"
+            >
+          </div>
+
+          {% comment %} ===== Variant select - noscript ===== {% endcomment %}
+          <select name="id" id="productSelect-{{ section_id }}" data-section="{{ section_id }}" class="product-single__variants original-select no-js" autocomplete="off">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <option {% if variant.id == current_variant.id %} selected {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+              {% else %}
+                <option value="{{ variant.id }}" disabled>
+                  {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+
+          {% comment %} ===== Add to cart - noscript ===== {% endcomment %}
+          <button
+            id="ProductSubmitButton-{{ section_id }}"
+            type="submit"
+            name="add"
+            class="btn"
+            {%- if product.selected_or_first_available_variant.available == false -%}
+              disabled
+            {%- endif -%}
+          >
+            <span>
+              {%- if product.selected_or_first_available_variant.available == false -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+          </button>
+        </noscript>
+      {%- endform -%}
+    </product-form>
+  {%- else -%}
+    {% comment %} ===== Empty product button ===== {% endcomment %}
+    <div class="product-form">
+      <div class="product-form__buttons form">
+        <button
+          type="submit"
+          name="add"
+          class="product-form__submit button button--full-width button--primary"
+          disabled
+        >
+          {{ 'products.product.sold_out' | t }}
+        </button>
+      </div>
+    </div>
+  {%- endif -%}
+</div>

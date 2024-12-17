@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/GiftPage_Banner_CandyJars.jpg",
+        "mobile_image_1": "shopify://shop_images/GiftPage_Banner_CandyJars_mobile2.jpg",
+        "button_text_1": "SHOP",
+        "button_url_1": "shopify://collections/root-category-gifts-nostalgic-candy-jars",
+        "image_2": "shopify://shop_images/GiftPage_Banner_BoxedChocolates.jpg",
+        "mobile_image_2": "shopify://shop_images/GiftPage_Banner_BoxedChocolates_mobile2.jpg",
+        "button_text_2": "shop",
+        "button_url_2": "shopify://pages/boxed-chocolates",
+        "image_3": "shopify://shop_images/GiftPage_Banner_SpecialtyChocolates.jpg",
+        "mobile_image_3": "shopify://shop_images/GiftPage_Banner_SpecialtyChocolates_mobile2.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://collections/root-category-gifts-specialty-chocolates",
+        "image_4": "shopify://shop_images/GiftPage_Banner_Fudge.jpg",
+        "mobile_image_4": "shopify://shop_images/GiftPage_Banner_Fudge_mobile2.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://collections/root-category-all-candy-fudge",
+        "image_5": "shopify://shop_images/GiftPage_Banner_SpecialtyCookies.jpg",
+        "mobile_image_5": "shopify://shop_images/GiftPage_Banner_SpecialtyCookies_mobile2.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://collections/root-category-gifts-specialty-cookies",
+        "image_6": "shopify://shop_images/GiftPage_Banner_monthclub.jpg",
+        "mobile_image_6": "shopify://shop_images/GiftPage_Banner_monthclub_mobile2.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://collections/root-category-gifts-candyfavorites-of-the-month-club",
+        "image_7": "shopify://shop_images/GiftPage_Banner_ToolBoxes.jpg",
+        "mobile_image_7": "shopify://shop_images/GiftPage_Banner_ToolBoxes_mobile2.jpg",
+        "button_text_7": "shop",
+        "button_url_7": "shopify://collections/root-category-gifts-tool-boxes"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

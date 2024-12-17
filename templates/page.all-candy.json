@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/AllCandyPage_Bulk_Banner.jpg",
+        "mobile_image_1": "shopify://shop_images/AllCandyPage_Bulk_Banner_mobile2.jpg",
+        "button_text_1": "SHOP",
+        "button_url_1": "shopify://pages/bulk-candy",
+        "image_2": "shopify://shop_images/AllCandyPage_Novelty_Banner.jpg",
+        "mobile_image_2": "shopify://shop_images/AllCandyPage_Novelty_Banner_mobile.jpg",
+        "button_text_2": "SHOP",
+        "button_url_2": "shopify://pages/novelty-candy",
+        "image_3": "shopify://shop_images/AllCandyPage_CandyBars_e44d1726-e826-48ba-aa8b-eb3378ce82ef.jpg",
+        "mobile_image_3": "shopify://shop_images/AllCandyPage_CandyBars_mobile_18d96fca-707c-4702-909f-2820d65f78e8.jpg",
+        "button_text_3": "SHOP",
+        "button_url_3": "shopify://pages/candy-bars",
+        "image_4": "shopify://shop_images/AllCandyPage_CFBags_017835ba-1bd2-41d7-9964-61b550a04b12.jpg",
+        "mobile_image_4": "shopify://shop_images/AllCandyPage_CFBags_mobile.jpg",
+        "button_text_4": "SHOP",
+        "button_url_4": "shopify://pages/candyfavorites-bags",
+        "image_5": "shopify://shop_images/AllCandyPage_Pez_Banner.jpg",
+        "mobile_image_5": "shopify://shop_images/AllCandyPage_Pez_Banner_mobile.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://collections/root-category-all-candy-pez-dispensers",
+        "image_6": "shopify://shop_images/AllCandyPage_GUM.jpg",
+        "mobile_image_6": "shopify://shop_images/AllCandyPage_GUM_mobile.jpg",
+        "button_text_6": "SHOP",
+        "button_url_6": "shopify://pages/chewing-gum",
+        "image_7": "shopify://shop_images/AllCandyPage_LICORICE.jpg",
+        "mobile_image_7": "shopify://shop_images/AllCandyPage_LICORICE_mobile.jpg",
+        "button_text_7": "SHOP",
+        "button_url_7": "shopify://pages/licorice-candy"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

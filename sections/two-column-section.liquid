@@ -1,0 +1,61 @@
+  <div class="two-col-wrap width--content">
+    {% for block in section.blocks %}
+      {% if block.settings.image != blank %}
+        <div class="image-wrap index-{{ forloop.index }}">
+        <a href="{{ block.settings.button_link }}" aria-label="Learn more about our Candy Concierge Program">
+        {% if block.settings.image %}
+           {{ block.settings.image | image_url: width:'640', height:'450' | image_tag: class: 'desktop-image' }}
+        {% endif %}
+        {% if block.settings.m_image %}
+        {{ block.settings.m_image | image_url: width:'400', height:'260' | image_tag: class: 'mobile-image' }}
+        {% endif %}
+        </a>  
+        {% if block.settings.button_link != blank %}   
+          <div class="button_wrapper">
+          <a href="{{ block.settings.button_link }}" class="common-button-border" aria-label="Learn more about our Candy Concierge Program"><span>{{ block.settings.button_text }}</span></a>
+          </div>
+        {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% schema %}
+{
+  "name": "Two Column Section",
+  "class": "two-column-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "m_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Section"
+    }
+  ]
+}
+{% endschema %}

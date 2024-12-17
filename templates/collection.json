@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "collection-header-default": {
+      "type": "collection-header",
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_title": true,
+        "show_description": false,
+        "content_position": "left",
+        "min_height_desktop": "original",
+        "show_image_desktop": false,
+        "min_height_mobile": "original",
+        "show_image_mobile": false,
+        "enable_parallax": false,
+        "enable_fade": false,
+        "colors": "white",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "settings": {
+        "products-per-page": 10,
+        "desktop-products-per-row": 3,
+        "mobile-products-per-row": "2",
+        "pagination_options": "pagination_default",
+        "desktop_position": "sidebar",
+        "enable_collection_title": false,
+        "enable_collection_description": false,
+        "enable_filtering": true,
+        "show_swatch_filter_labels": true,
+        "enable_sorting": true,
+        "show_description": true
+      }
+    },
+    "30f3be94-b93c-4405-a65f-ff44b9edc829": {
+      "type": "collection-list",
+      "blocks": {
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#262428",
+            "overlay_color": "#ffffff"
+          }
+        },
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#262428",
+            "overlay_color": "#ffffff"
+          }
+        },
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#262428",
+            "overlay_color": "#ffffff"
+          }
+        },
+        "0f91d758-80ed-4b07-8313-433efbe43bce": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": true,
+            "overlay_font_color": "#262428",
+            "overlay_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-1",
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-2",
+        "template--17175909925094__30f3be94-b93c-4405-a65f-ff44b9edc829-featured_collection-3",
+        "0f91d758-80ed-4b07-8313-433efbe43bce"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Featured Collections",
+        "description": "",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "items-per-row": 4,
+        "remove-spacing": false,
+        "section-width": "full",
+        "content-position": "overlay",
+        "colors": "light"
+      }
+    },
+    "template_product_info_columns_hkXRKB": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "image_and_text_FYhewQ": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "image_and_text_k4zHAw": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "image_and_text_6Xgpxm": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_and_text_FYhewQ",
+        "image_and_text_k4zHAw",
+        "image_and_text_6Xgpxm"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "description": "",
+        "columns_per_row": 3,
+        "text_alignment": "left",
+        "vertical_alignment": "top",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    },
+    "text_testimonials_6FgRUV": {
+      "type": "testimonials",
+      "blocks": {
+        "text_zL7mcB": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\"</p>",
+            "customer_name": "John Smith",
+            "link": "",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "text_zL7mcB"
+      ],
+      "disabled": true,
+      "settings": {
+        "circle_images": true,
+        "bg_color": "",
+        "title": "Testimonials",
+        "description": "",
+        "section_padding_top": 60,
+        "section_padding_bottom": 55,
+        "colors": "accent"
+      }
+    }
+  },
+  "order": [
+    "collection-header-default",
+    "product-grid",
+    "30f3be94-b93c-4405-a65f-ff44b9edc829",
+    "template_product_info_columns_hkXRKB",
+    "text_testimonials_6FgRUV"
+  ]
+}

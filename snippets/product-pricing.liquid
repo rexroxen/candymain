@@ -1,0 +1,16 @@
+<span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+<span 
+  data-product-price id="ProductPrice" itemprop="price"
+  content="{{ current_variant.price | divided_by: 100 }}"
+>
+  {% unless current_variant %}
+    {{ 'products.product.unavailable' | t }}
+  {% else %}
+    <span 
+      data-price-text data-unavailable-text="{{ 'products.product.unavailable' | t }}" 
+      class="money"
+    >
+      {{ current_variant.price | money }}
+    </span>
+  {% endunless %}
+</span>

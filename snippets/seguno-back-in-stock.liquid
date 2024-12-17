@@ -1,0 +1,59 @@
+{% unless product.tags contains 'back-in-stock-excluded' %}
+	<script
+		type="application/json"
+		data-shop-id="{{ shop.id }}"
+		data-seguno-back-in-stock>
+		{
+		  "product": {
+		    "id": {{ product.id }},
+		    "available_variants": [{{ product.variants | where: 'available', true | map: 'id' | join: ',' }}],
+			"first_variant": {{ product.variants | first | map: 'id' }},
+		    "default_variant": {{ product.selected_or_first_available_variant | map: 'id' }}
+		  },
+          "background_color": "#ededee70",
+          "text_color": "#121212",
+          "font_size": "16px",
+          "form_gap": "16px",
+          "padding": "20px",
+          "button_background_color": "unset",
+          "button_text_color": "#ffffff",
+          "button_border_radius": "0",
+          "button_border_color": "#594e4f",
+          "button_border_size": "0",
+          "button_padding": "0",
+          "button_font_size": "16px",
+          "button_alignment": "stretch",
+          "input_border_radius": "3px",
+          "input_background_color": "#ffffff",
+          "input_text_color": "#000",
+          "input_border_color": "#EF3F3A",
+          "input_border_size": "1px",
+          "input_padding": "8px",
+          "input_font_size": "16px",
+          "heading": "<h3 style='font-family:SpecialElite-Regular'>GET NOTIFIED WHEN THIS IS BACK IN STOCK</h3>",
+          "label_email": "<h3 style='display:none;'>Email</h3>",
+          "placeholder_email": "Enter your email",
+          "show_permission_checkbox": true,
+          "label_permission": "<p style='font-family:Montserrat;'>Also, sign up to receive newsletters</p>",
+          "label_notify": "<p style='font-family:Montserrat;margin:0;font-weight: 800;padding: 10px; outline: 2px solid #EF3F3A; outline-offset: 4px;background-color:#ef3f3a;'>NOTIFY ME</p>",
+          "label_success": "<p>Thanks! You will be notified once the product is back in stock.</p>",
+          "default_variant": "available",
+          "custom_css": ""
+		}
+	</script>
+	<script>
+		(() => {
+			const TEST_MODE = false;
+
+			if (!TEST_MODE || new URLSearchParams(window.location.search).get('bis-test') === 'true') {
+				const backInStockScript = document.createElement('script');
+				backInStockScript.src = 'https://cdn.seguno.com/back-in-stock/back_in_stock.js';
+				backInStockScript.async = true;
+				document.body.appendChild(backInStockScript);
+			}
+		})();
+	</script>
+{% endunless %}
+<style>
+
+</style>

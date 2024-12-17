@@ -1,0 +1,128 @@
+<!-- /snippets/breadcrumb.liquid -->
+{% comment %}
+  Documentation - http://docs.shopify.com/support/your-website/navigation/creating-a-breadcrumb-navigation
+{% endcomment %}
+
+<nav class="breadcrumb nav-link-animated--custom" aria-label="breadcrumbs">
+  <span class="breadcrumb-item">
+    <a class="animated-link--item" href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home_link_title' | t }}">
+      <span class="label-font">{{ 'general.breadcrumbs.home' | t }}</span>
+    </a>
+  </span>
+
+  {% if template contains 'product' %}
+
+{% assign collection_title = '' %}
+{% assign collection_url = '' %}
+
+{% if product.collections.size > 0 %}
+  {% if product.collections[0].title == 'ALL' %}
+    {% if product.collections.size > 1 %}
+      {% assign collection_title = product.collections[1].title %}
+      {% assign collection_url = product.collections[1].url %}
+    {% else %}
+      {% assign collection_title = 'This product is only in the "ALL" collection.' %}
+    {% endif %}
+  {% else %}
+    {% assign collection_title = product.collections[0].title %}
+    {% assign collection_url = product.collections[0].url %}
+  {% endif %}
+{% endif %}
+   
+     {% if collection_title %}
+      <span class="breadcrumb-divider" aria-hidden="true">/</span>
+       <span class="breadcrumb-item">
+       <a class="animated-link--item" href="{{ collection_url }}">  
+        <span class="label-font">
+         {{ collection_title }}
+        </span>
+       </a>
+        </span>
+      {% endif %}
+      <span class="breadcrumb-divider" aria-hidden="true">/</span>
+       <span class="breadcrumb-item">
+        <span class="label-font">{{ product.title }}</span>
+       </span>    
+      
+
+  {% elsif template contains 'collection' and collection.handle %}
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ routes.all_products_collection_url }}">
+        <span class="label-font">{% comment %}{{ 'general.breadcrumbs.shop' | t }}{% endcomment %}Collections</span>
+      </a>
+    </span>
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ collection.url }}" title="{{ collection.title }}">
+        <span class="label-font">{{ collection.title }}</span>
+      </a>
+    </span>
+
+  {% elsif template.name == 'blog' %}
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    {% if current_tags %}
+      <span class="breadcrumb-item">
+        <a class="animated-link--item" href="{{ blog.url }}" title="{{ blog.title }}">
+          <span class="label-font">{{ blog.title }}</span>
+        </a>
+      </span>
+      <span class="breadcrumb-divider" aria-hidden="true">/</span>
+      <span>{{ current_tags | join: " + " }}</span>
+      {% else %}
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ blog.url }}" title="{{ blog.title }}">{{ blog.title }}</a>
+    </span>
+    {% endif %}
+
+  {% elsif template.name == 'article' %}
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    <span class="breadcrumb-item">
+      <a class="animated-link--item" href="{{ blog.url }}" title="{{ blog.title }}">
+        <span class="label-font">{{ blog.title }}</span>
+      </a>
+    </span>
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    <span class="breadcrumb-item">
+      <span class="label-font">{{ article.title }}</span>
+    </span>
+
+  {% elsif template contains 'page' %}
+
+{% assign menu = linklists['main-menu'] %}
+{% assign page_title = page.title %}
+
+{% assign parent_link = null %}
+
+{% for link in menu.links %}
+  {% if link.links.size > 0 %}
+    {% for child_link in link.links %}
+      {% if child_link.title == page_title %}
+        {% assign parent_link = link %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if parent_link %}
+<span class="breadcrumb-divider" aria-hidden="true">/</span>  
+  <span class="breadcrumb-item">
+      <span class="label-font"><a href="{{ parent_link.url }}">{{ parent_link.title }}</a></span>
+  </span>
+{% endif %}
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+    <span class="breadcrumb-item">
+      <span class="label-font">{{ page.title }}</span>
+    </span>
+  {% else %}
+
+    <span class="breadcrumb-divider" aria-hidden="true">/</span>
+
+  {% endif %}
+</nav>

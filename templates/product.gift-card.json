@@ -1,0 +1,218 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h2",
+            "margin_bottom": 10
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 10
+          }
+        },
+        "separator_9XaMPT": {
+          "type": "separator",
+          "settings": {
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "hide_out_of_stock_variants": false,
+            "variant_style": "dropdowns",
+            "thumbnail_changes_variant": false,
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "margin_bottom": 30
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 10
+          }
+        },
+        "product_description_ik9Hkw": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": true,
+            "icon": "none",
+            "heading": "Description",
+            "open_close_icon": "plus_minus",
+            "margin_bottom": 0
+          }
+        },
+        "4fdb087c-4728-4785-b270-a71a092b7898": {
+          "type": "social_sharing",
+          "settings": {
+            "margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "separator_9XaMPT",
+        "options",
+        "buy_buttons",
+        "product_description_ik9Hkw",
+        "4fdb087c-4728-4785-b270-a71a092b7898"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "image_size": "medium",
+        "image-display": "thumbnails",
+        "thumbnail_position": "left",
+        "enable_video_loop": true,
+        "app_margin_bottom": 20
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "disabled": true,
+      "settings": {
+        "enable_readmore": false
+      }
+    },
+    "06-testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "91627eed-5702-4e9d-9f9a-0a6472706764": {
+          "type": "text",
+          "settings": {
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\"</p>",
+            "customer_name": "John Smith",
+            "link": "",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "91627eed-5702-4e9d-9f9a-0a6472706764"
+      ],
+      "settings": {
+        "circle_images": true,
+        "title": "",
+        "description": "",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "accent"
+      }
+    },
+    "08-info-columns": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "template--16327181074597__0fc6742c-1168-43e2-8978-750bb12b448b-image_and_text-1": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "88db6a93-62b7-47c1-9b48-b2ca48fb0614": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "05ff5e7a-e4d2-4499-bea3-46a2de05cc98": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16327181074597__0fc6742c-1168-43e2-8978-750bb12b448b-image_and_text-1",
+        "88db6a93-62b7-47c1-9b48-b2ca48fb0614",
+        "05ff5e7a-e4d2-4499-bea3-46a2de05cc98"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "columns_per_row": 3,
+        "text_alignment": "center",
+        "vertical_alignment": "top",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    },
+    "text_rich_text_Umn6be": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bf8whA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rich text",
+            "heading--text-size": 30
+          }
+        },
+        "richtext_iWdzYR": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h1><strong>Heading</strong></h1>",
+            "text_size": 24
+          }
+        },
+        "richtext_EqTgyR": {
+          "type": "richtext",
+          "settings": {
+            "text_size": 16
+          }
+        },
+        "button_GD6cFg": {
+          "type": "button",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_bf8whA",
+        "richtext_iWdzYR",
+        "richtext_EqTgyR",
+        "button_GD6cFg"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "text_alignment_desktop": "left",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "accent"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "product-description",
+    "06-testimonials",
+    "08-info-columns",
+    "text_rich_text_Umn6be"
+  ]
+}

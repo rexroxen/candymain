@@ -1,0 +1,90 @@
+{% comment %}
+  Renders a deferred media object with a poster image and a media player.
+
+  Accepts:
+  - delayed_media: Image object to use as the poster image (required)
+  - section_id: ID of the section containing the media (required)
+  - media_poster_classes: Additional classes to apply to the poster image (optional)
+  - enable_video_loop: Whether to loop the video (required)
+  - padding_style: Padding style to apply to the media wrapper (required)
+  - media_wrapper_classes: Additional classes to apply to the media wrapper (optional)
+  - active_media_class: Class to apply to the active media element (optional)
+
+  Usage:
+    {% render delayed_media with delayed_media: media, enable_video_loop: enable_video_loop, padding_style: padding_style, media_wrapper_classes: 'product-single__media__wrapper' %}
+{% endcomment %}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'component-deferred-media.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="deferred-media"></script>
+</safe-load-scripts>
+
+{% if delayed_media %}
+  <deferred-media
+    data-media-id="{{ delayed_media.id }}"
+    data-section-id="{{ section_id }}"
+    {% if active_media_class %}data-active-media-class="{{ active_media_class }}"{% endif %}
+  >
+    <img
+      data-media-poster
+      {% if media_poster_classes %}class="{{ media_poster_classes }}"{% endif %}
+      src="{{ delayed_media.preview_image | image_url: width: 1445 }}"
+      alt="{% if delayed_media.alt %}{{ delayed_media.alt }}{% else %}{{ product.title }}{% endif %}"
+      width="{{ delayed_media.width }}"
+      height="{{ delayed_media.height }}"
+      sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+      loading="eager"
+    />
+
+    <template>
+      {%- case delayed_media.media_type -%}
+        {%- when 'external_video' -%}
+          {%- assign video_class = 'js-' | append: delayed_media.host -%}
+          {%- if delayed_media.host == 'youtube' -%}
+            <div data-media-wrapper {{ padding_style }} class="type-{{ delayed_media.host }}{% if media_wrapper_classes %} {{ media_wrapper_classes }}{% endif %}">
+              {{ delayed_media | external_video_url: autoplay: true, loop: enable_video_loop, playlist: delayed_media.external_id | external_video_tag: class: video_class, loading: "lazy" }}
+            </div>
+          {%- else -%}
+            <div data-media-wrapper {{ padding_style }} class="type-{{ delayed_media.host }}{% if media_wrapper_classes %} {{ media_wrapper_classes }}{% endif %}">
+              {{ delayed_media | external_video_url: autoplay: true, muted: true, loop: enable_video_loop | external_video_tag: class: video_class, loading: "lazy" }}
+            </div>
+          {%- endif -%}
+        {%- when 'video' -%}
+          <div data-media-wrapper {{ padding_style }}{% if media_wrapper_classes %} class="{{ media_wrapper_classes }}"{% endif %}>
+            {{ 'plyr.min.css' | asset_url | stylesheet_tag }}
+            {{ delayed_media | media_tag: image_size: "2048x", class: 'plyr', autoplay: true, loop: enable_video_loop, controls: true, preload: "none" }}
+          </div>
+        {%- when 'model' -%}
+          <div data-media-wrapper {{ padding_style }}{% if media_wrapper_classes %} class="{{ media_wrapper_classes }}"{% endif %}>
+            {{ 'shopify-model-viewer-ui.min.css' | asset_url | stylesheet_tag }}
+            {{ delayed_media | media_tag: image_size: "2048x", toggleable: true }}
+          </div>
+      {%- endcase -%}
+    </template>
+
+    {% if delayed_media.media_type == 'video' or delayed_media.media_type == 'external_video' %}
+      <button
+        type="button"
+        class="round-icon-btn-lg btn-colors-primary btn-hover-default icon-btn-focus"
+        tabindex="0"
+        data-media-id="{{ delayed_media.id }}"
+        data-media-play-button
+        aria-label="{{ 'general.accessibility.play_icon.play_media' | t }}"
+      >
+        {% render 'theme-icon' with icon: 'play', iconSize: 20 %}
+      </button>
+    {% endif %}
+
+    {% if delayed_media.media_type == 'model' %}
+      <button
+        type="button"
+        class="round-icon-btn-lg btn-colors-primary btn-hover-default icon-btn-focus"
+        tabindex="0"
+        data-media-id="{{ delayed_media.id }}"
+        data-media-play-button
+        aria-label="{{ 'general.accessibility.3d_model.load_3d_model' | t }}"
+      >
+        {% render 'theme-icon' with icon: 'cube', iconSize: 20 %}
+      </button>
+    {% endif %}
+  </deferred-media>
+{% endif %}

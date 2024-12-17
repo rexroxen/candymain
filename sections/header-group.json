@@ -1,0 +1,294 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_pEJJRg": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<a href=\"/pages/cyber-monday-special\" target=\"_blank\" title=\"Cyber Monday Special\">Cyber Monday Special: 20% Off Entire Order with code CFCYBER24! Click for details. </a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_Ai9EQq": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<a href=\"/pages/cyber-monday-extension-special\" target=\"_blank\" title=\"Cyber Monday Extension Special\">Cyber Monday Extension: 20% Off Entire Order with code CFCYBEREXT24! Click for details. </a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_dcDfBC": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<a href=\"/pages/black-friday-special\" target=\"_blank\" title=\"Black Friday Special\">Black Friday Special:  Free Shipping Lowered to $69.95!  Click for Details. </a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "00-announcement": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "FREE SHIPPING on orders over $149.95!",
+            "announcement_bg_color": "#452a18",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_LGNpqi": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<a href=\"/pages/christmas-candy\" title=\"Christmas Candy\">Shop Christmas Candy Now While Supplies Last!</a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_TbxFY7": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "<a href=\"/collections/root-category-holiday-candy-christmas-candy-candy-canes\" title=\"Candy Canes\">FREE RUSH SERVICE ON CANDY CANES W/ CODE \"CANDYCANERUSH\"!</a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_z9YKVx": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<a href=\"/pages/early-cyber-monday-special\" title=\"Early Cyber Monday Special\">Early Cyber Monday Special: Up to $20 Off Your Order! Click for details.</a>",
+            "announcement_bg_color": "#5d4037",
+            "announcement_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_pEJJRg",
+        "announcement_Ai9EQq",
+        "announcement_dcDfBC",
+        "00-announcement",
+        "announcement_LGNpqi",
+        "announcement_TbxFY7",
+        "announcement_z9YKVx"
+      ],
+      "settings": {
+        "desktop_social_icons": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "00-mm": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "All Candy",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": false,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": false,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "01-mm": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Brands",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": false,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": false,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_nFGyr6": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Color",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_RjXUbt": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Decades",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_8crLLr": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Flavors",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_eqni7H": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Gifts",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_tHBmjK": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Types",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        },
+        "content_ip68fW": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Holiday",
+            "image_1_aspect_ratio": "square",
+            "mega_image_header_1": "",
+            "mega_image_subheader_1": "",
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_link_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "image_2_aspect_ratio": "square",
+            "mega_image_header_2": "",
+            "mega_image_subheader_2": "",
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff",
+            "mega_image_link_2": "",
+            "show_promo_2_in_mobile_drawer": true
+          }
+        }
+      },
+      "block_order": [
+        "00-mm",
+        "01-mm",
+        "content_nFGyr6",
+        "content_RjXUbt",
+        "content_8crLLr",
+        "content_eqni7H",
+        "content_tHBmjK",
+        "content_ip68fW"
+      ],
+      "settings": {
+        "sticky_header": true,
+        "enable_search": true,
+        "logo": "shopify://shop_images/CandyFavorites_logo_tagline2.png",
+        "logo-placement": "left",
+        "logo_max_width": 450,
+        "logo_max_width_mobile": 120,
+        "logo_padding": 15,
+        "mobile_social_icons": true,
+        "show_icons": true,
+        "cart-style": "shopping-cart",
+        "cart_count": true,
+        "overlay_header_homepage": false,
+        "overlay_header_collection": false,
+        "overlay_header_list_collection": false,
+        "overlay_header_contact": false,
+        "overlay_opacity": 0,
+        "show_currency_selector": true,
+        "show_locale_selector": false,
+        "main_linklist": "main-menu",
+        "dropdown_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

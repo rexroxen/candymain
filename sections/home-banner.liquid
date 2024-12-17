@@ -1,0 +1,111 @@
+<div class="banner-wrapper">
+  <div class="home-banner-main width--content">
+    <div class="main-banner">
+      {% for block in section.blocks %}
+        {% if forloop.index == 1 %}
+          {% if block.settings.image != blank %} 
+            <a href="{{ block.settings.button_link }}">{{ block.settings.image | image_url: width:'1920', height:'650' | image_tag: class: 'desktop-image' }}</a>
+          {% endif %}
+          {% if block.settings.m_image != blank %} 
+            <a href="{{ block.settings.button_link }}">{{ block.settings.m_image | image_url: width:'430', height:'500' | image_tag: class: 'mobile-image' }}</a>
+          {% endif %}
+          <div class="button_wrapper"
+               style="
+               {% if block.settings.button_top_spacing != 0 %}top: {{ block.settings.button_top_spacing }}px;{% else %}top: unset;{% endif %}
+               {% if block.settings.button_left_spacing != 0 %}left: {{ block.settings.button_left_spacing }}px;{% else %}left: unset;{% endif %}
+               {% if block.settings.button_right_spacing != 0 %}right: {{ block.settings.button_right_spacing }}px;{% else %}right: unset;{% endif %}
+               {% if block.settings.button_bottom_spacing != 0 %}bottom: {{ block.settings.button_bottom_spacing }}px;{% else %}bottom: unset;{% endif %}
+               ">
+            <a href="{{ block.settings.button_link }}" class="common-button-border"><span>{{ block.settings.button_text }}</span></a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="sub-banner-wrap">
+      {% for block in section.blocks offset: 1 %}
+        <div class="sub-banner">
+          {% if block.settings.image != blank %}
+            <a href="{{ block.settings.button_link }}">{{ block.settings.image | image_url: width:'960', height:'550' | image_tag: class: 'desktop-image' }}</a>
+          {% endif %}
+          {% if block.settings.m_image != blank %}
+            <a href="{{ block.settings.button_link }}">{{ block.settings.m_image | image_url: width:'400', height:'260' | image_tag: class: 'mobile-image' }}</a>
+          {% endif %}
+          <div class="button_wrapper"
+               style="
+               {% if block.settings.button_top_spacing != 0 %}top: {{ block.settings.button_top_spacing }}px;{% else %}top: unset;{% endif %}
+               {% if block.settings.button_left_spacing != 0 %}left: {{ block.settings.button_left_spacing }}px;{% else %}left: unset;{% endif %}
+               {% if block.settings.button_right_spacing != 0 %}right: {{ block.settings.button_right_spacing }}px;{% else %}right: unset;{% endif %}
+               {% if block.settings.button_bottom_spacing != 0 %}bottom: {{ block.settings.button_bottom_spacing }}px;{% else %}bottom: unset;{% endif %}
+               ">
+            <a href="{{ block.settings.button_link }}" class="common-button-border"><span>{{ block.settings.button_text }}</span></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>   
+</div>
+
+{% schema %}
+{
+  "name": "Home Banner",
+  "class": "home-banner",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "m_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "number",
+          "id": "button_top_spacing",
+          "label": "Top Spacing (px)",
+          "default": 0
+        },
+        {
+          "type": "number",
+          "id": "button_left_spacing",
+          "label": "Left Spacing (px)",
+          "default": 0
+        },
+        {
+          "type": "number",
+          "id": "button_right_spacing",
+          "label": "Right Spacing (px)",
+          "default": 0
+        },
+        {
+          "type": "number",
+          "id": "button_bottom_spacing",
+          "label": "Bottom Spacing (px)",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Banner"
+    }
+  ]
+}
+{% endschema %}

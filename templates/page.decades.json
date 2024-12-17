@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-page",
+      "settings": {
+        "image_1": "shopify://shop_images/RetroPre1920_Banner.jpg",
+        "mobile_image_1": "shopify://shop_images/RetroPre1920_Banner_mobile.jpg",
+        "button_text_1": "Shop",
+        "button_url_1": "shopify://collections/decades-before-1919-retro-candy",
+        "image_2": "shopify://shop_images/Retro1920s_Banner.jpg",
+        "mobile_image_2": "shopify://shop_images/Retro1920s_Banner_mobile.jpg",
+        "button_text_2": "Shop",
+        "button_url_2": "shopify://collections/root-category-decades-1920s-retro-candy",
+        "image_3": "shopify://shop_images/Retro1930s_Banner.jpg",
+        "mobile_image_3": "shopify://shop_images/Retro1930s_Banner_mobile.jpg",
+        "button_text_3": "Shop",
+        "button_url_3": "shopify://collections/root-category-decades-1930s-retro-candy",
+        "image_4": "shopify://shop_images/Retro1940s_Banner.jpg",
+        "mobile_image_4": "shopify://shop_images/Retro1940s_Banner_mobile_aab80c4a-e453-46bd-a98b-7f499a110a90.jpg",
+        "button_text_4": "Shop",
+        "button_url_4": "shopify://collections/root-category-decades-1940s-retro-candy",
+        "image_5": "shopify://shop_images/Retro1950s_Banner.jpg",
+        "mobile_image_5": "shopify://shop_images/Retro1950s_Banner_mobile2.jpg",
+        "button_text_5": "SHOP",
+        "button_url_5": "shopify://collections/root-category-decades-1950s-retro-candy",
+        "image_6": "shopify://shop_images/Retro1960s_Banner.jpg",
+        "mobile_image_6": "shopify://shop_images/Retro1960s_Banner_mobile.jpg",
+        "button_text_6": "Shop",
+        "button_url_6": "shopify://collections/root-category-decades-1960s-retro-candy",
+        "image_7": "shopify://shop_images/Retro1970s_Banner.jpg",
+        "mobile_image_7": "shopify://shop_images/Retro1970s_Banner_mobile.jpg",
+        "button_text_7": "Shop",
+        "button_url_7": "shopify://collections/root-category-decades-1970s-retro-candy"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

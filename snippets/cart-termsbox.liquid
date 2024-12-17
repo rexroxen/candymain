@@ -1,0 +1,47 @@
+<p class="cart-attribute__field">
+  <input type="hidden" name="attributes[{{ block.settings.internal_label }}]" value="No" form="cart">
+  <input id="termsbox_id" {% if block.settings.mandatory %}class="required" required {% endif %} type="checkbox" name="attributes[{{ block.settings.internal_label }}]" value="Yes" form="cart" checked>
+  <label for="termsbox_id" style="cursor: pointer;">
+  	{{ block.settings.prelink_text }}
+  	<a href="{{ block.settings.terms_page.url }}" target="_blank">{{ block.settings.link_text }}</a> {{ block.settings.center_text }} <a href="{{ block.settings.privacy_page.url }}" target="_blank">{{ block.settings.link_text1 }}</a>
+  	{{ block.settings.postlink_text }}
+  </label>
+</p>
+
+<style>
+  .dynamic-checkout__content .shopify-cleanslate{
+    display: none;
+  }
+ .dynamic-checkout__content.active .shopify-cleanslate{
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the checkbox, button, and content elements
+    const checkbox = document.getElementById('termsbox_id');
+    const button = document.querySelector('.cart--button-checkout');
+    const content = document.querySelector('.dynamic-checkout__content');
+    
+    // Function to toggle button state and content class
+    function updateUI() {
+        if (checkbox.checked) {
+            button.classList.remove('disabled');
+            button.disabled = false;
+            content.classList.add('active'); // Add 'active' class when checked
+        } else {
+            button.classList.add('disabled');
+            button.disabled = true;
+            content.classList.remove('active'); // Remove 'active' class when unchecked
+        }
+    }
+    
+    // Initialize button state and content class based on checkbox on page load
+    updateUI();
+    
+    // Add event listener to checkbox
+    checkbox.addEventListener('change', updateUI);
+  });
+</script>
+

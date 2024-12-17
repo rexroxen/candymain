@@ -1,0 +1,55 @@
+{% assign items = section.blocks %}
+
+<div class="custom-multicolumn">
+  {% for block in items %}
+    <div class="custom-multicolumn__item">
+      <div class="custom-multicolumn__image">
+        <a href="{{ block.settings.link }}">
+          <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.heading }}">
+          <h3>{{ block.settings.heading }}</h3>
+        </a>
+      </div>
+      
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Custom Multicolumn",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Multicolumn",
+      "category": "Custom"
+    }
+  ],
+  
+}
+{% endschema %}
+
+
+

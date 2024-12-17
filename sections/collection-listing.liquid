@@ -1,0 +1,48 @@
+<div class="collection-page_wrapper width--content">
+<div class="title_wrap"> 
+  <h1>{{ page.title }}</h1>
+</div>
+<div class="col-block-wrap">
+  <div class="left-block"></div>
+    <div class="right-block grid-block">
+{% comment %}      
+{% assign col_list = page.metafields.collection.collection_list %}
+{% assign col_list = page.metafields.collection.collection_list | remove: '["' %}
+{% assign col_list_f = col_list | remove: '"]' %}
+{% assign col_list_final = col_list_f | split: '|' %}
+{% endcomment %}
+{% assign child_collection = page.metafields.custom.sub_collections.value %}
+{% for collection in child_collection %}
+    {% assign custom_link = collection.metafields.custom.custom_landing_page_link %}
+    {% if collection != blank %}
+  <div class="col-grid">
+    <a href="{% if custom_link != blank %}{{ custom_link }}{% else %}{{ collection.url }}{% endif %}">
+      <div class="image_wrap">
+        {% if collection.image %}
+          <img src="{{ collection.image | img_url: '284x228' }}" alt="{{ collection.image.alt }}" />
+        {% else %}
+          <img src="{{ collection.products.first | img_url: '284x228' }}" alt="{{ collection.title | escape  }}" />
+        {% endif %}
+      </div>
+      <div class="title_wrap">
+       <p>{{ collection.title }}</p> 
+      </div>
+    </a>
+  </div>
+     {% endif %}   
+{% endfor %}     
+</div>
+{% if page.content != blank %}  
+  <div class="col-description">
+    {{ page.content }}
+  </div>
+{% endif %}
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Collection Listing",
+    "class": "collection-listing",
+    "settings": []
+  }
+{% endschema %}

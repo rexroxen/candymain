@@ -1,0 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--page",
+      "blocks": {
+        "menu_wJnGzy": {
+          "type": "menu",
+          "settings": {
+            "menu": "page-candy-types"
+          }
+        },
+        "image_picker_j7reCE": {
+          "type": "image_picker",
+          "settings": {
+            "image_title": "",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_wJnGzy",
+        "image_picker_j7reCE"
+      ],
+      "settings": {
+        "page_title_enabled": true,
+        "page_width": "narrow"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,425 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collage_frpKnf": {
+      "type": "collage",
+      "blocks": {
+        "image_f4eYDD": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Christmas_banner_MAIN2_9f4d91d9-3098-483e-b496-2326f8f8d542.jpg",
+            "mobile_image": "shopify://shop_images/Christmas_banner_MAIN_mobile_18bf1d03-a765-478c-9ff1-2bc6b57fcbb9.jpg",
+            "heading": "CHRISTMAS",
+            "heading_size": 30,
+            "button_label": "Shop",
+            "url": "shopify://pages/christmas-candy",
+            "desktop_position": "md-min-align-bottom md-min-justify-left",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#262428",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#242424",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "image_XGBpmi": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/CF_RETRO_Banner.jpg",
+            "mobile_image": "shopify://shop_images/CF_RETRO_Banner_mobile_newsite.jpg",
+            "heading": "RETRO",
+            "heading_size": 30,
+            "button_label": "Shop",
+            "url": "shopify://pages/decades",
+            "desktop_position": "md-min-align-center md-min-justify-center",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#262428",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#242424",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "image_a6XeDK": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/CF_BULK_Banner.jpg",
+            "mobile_image": "shopify://shop_images/CF_BULK_Banner_mobile_newsite.jpg",
+            "heading": "Shop",
+            "heading_size": 30,
+            "button_label": "Shop",
+            "url": "shopify://pages/bulk-candy",
+            "desktop_position": "md-min-align-center md-min-justify-center",
+            "mobile_position": "md-max-align-center md-max-justify-center",
+            "text_color": "#262428",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#242424",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "image_f4eYDD",
+        "image_XGBpmi",
+        "image_a6XeDK"
+      ],
+      "settings": {
+        "custom_class": "home-main-banner",
+        "title": "",
+        "description": "",
+        "section_padding_top": 30,
+        "section_padding_bottom": 0,
+        "remove_spacing": false,
+        "section_width": "full",
+        "width_1": "1",
+        "height_1": "3",
+        "width_2": "2",
+        "height_2": "3",
+        "width_3": "2",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "4",
+        "block_alignment": "center",
+        "color_scheme": "white"
+      }
+    },
+    "home_banner_XKCt8V": {
+      "type": "home-banner",
+      "blocks": {
+        "banner_Q4RyQt": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/Halloween_Banner2.jpg",
+            "m_image": "shopify://shop_images/Halloween_Banner_mobile.jpg",
+            "button_link": "shopify://pages/halloween-candy",
+            "button_text": "SHOP",
+            "button_top_spacing": 0,
+            "button_left_spacing": 492,
+            "button_right_spacing": 0,
+            "button_bottom_spacing": 180
+          }
+        },
+        "banner_bWfXVQ": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/CF_RETRO_Banner.jpg",
+            "m_image": "shopify://shop_images/CF_RETRO_Banner_mobile_newsite.jpg",
+            "button_link": "shopify://pages/decades",
+            "button_text": "SHOP",
+            "button_top_spacing": 0,
+            "button_left_spacing": 190,
+            "button_right_spacing": 0,
+            "button_bottom_spacing": 110
+          }
+        },
+        "banner_xabcdH": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/CF_BULK_Banner.jpg",
+            "m_image": "shopify://shop_images/CF_BULK_Banner_mobile_newsite.jpg",
+            "button_link": "shopify://pages/bulk-candy",
+            "button_text": "SHOP",
+            "button_top_spacing": 0,
+            "button_left_spacing": 190,
+            "button_right_spacing": 0,
+            "button_bottom_spacing": 110
+          }
+        }
+      },
+      "block_order": [
+        "banner_Q4RyQt",
+        "banner_bWfXVQ",
+        "banner_xabcdH"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "3643d38b-24f2-4040-ab67-4b4b44a63aab": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Customer Favorites",
+        "description": "",
+        "collection": "root-category-featured-candies",
+        "show_view_all": false,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "colors": "white"
+      }
+    },
+    "50b03afc-6c7a-4252-94c2-7579c9d3b3ee": {
+      "type": "collage",
+      "blocks": {
+        "83447c73-f480-4c7d-8508-249f594f3aa3": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/NoveltyCandy_banner_newsite_ae54c25a-fbef-43c2-9b87-9f344bd28b3d.jpg",
+            "mobile_image": "shopify://shop_images/CF_NOVELTY_Banner_mobile_newsite.jpg",
+            "heading": "SHOP",
+            "heading_size": 30,
+            "button_label": "SHOP",
+            "url": "shopify://pages/novelty-candy",
+            "desktop_position": "md-min-align-bottom md-min-justify-center",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#000000",
+            "button_color": "#ffffff",
+            "button_background_color": "#d10029",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "0d4c44b0-cb7c-43dc-829a-743dfa47a878": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/CF_ColorCandy_banner_newsite_06a81ab3-3830-4a8f-8979-49f098d68829.jpg",
+            "mobile_image": "shopify://shop_images/CF_COLOR_Banner_mobile_newsite.jpg",
+            "heading": "Color Candy",
+            "heading_size": 30,
+            "button_label": "Shop",
+            "url": "shopify://pages/color",
+            "desktop_position": "md-min-align-bottom md-min-justify-center",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#000000",
+            "button_color": "#ffffff",
+            "button_background_color": "#d10029",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "5fd7fd7f-23e6-462d-902b-8c1a314976cb": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Christmas_banner_Candycanes.jpg",
+            "mobile_image": "shopify://shop_images/Christmas_banner_Candycanes_mobile.jpg",
+            "heading": "Candy Canes",
+            "heading_size": 30,
+            "button_label": "SHOP NOW",
+            "url": "shopify://collections/root-category-holiday-candy-christmas-candy-candy-canes",
+            "desktop_position": "md-min-align-bottom md-min-justify-center",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#000000",
+            "button_color": "#ffffff",
+            "button_background_color": "#d10029",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "83447c73-f480-4c7d-8508-249f594f3aa3",
+        "0d4c44b0-cb7c-43dc-829a-743dfa47a878",
+        "5fd7fd7f-23e6-462d-902b-8c1a314976cb"
+      ],
+      "settings": {
+        "custom_class": "home-three-col-section",
+        "title": "",
+        "description": "",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "remove_spacing": false,
+        "section_width": "content",
+        "width_1": "3",
+        "height_1": "4",
+        "width_2": "3",
+        "height_2": "4",
+        "width_3": "3",
+        "height_3": "4",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "6",
+        "block_alignment": "center",
+        "color_scheme": "white"
+      }
+    },
+    "image_slider_w7dDE3": {
+      "type": "image-slider",
+      "blocks": {
+        "image_3xyk99": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hershey_brandlogo1.jpg",
+            "url": "shopify://collections/root-category-brands-hershey-chocolates"
+          }
+        },
+        "image_9dwQa7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Boyer_brandlogo2.jpg",
+            "url": "shopify://collections/root-category-brands-boyer-candy"
+          }
+        },
+        "image_ycUMkC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DubbleBubble_brandlogo1.jpg",
+            "url": "shopify://collections/root-category-brands-dubble-bubble"
+          }
+        },
+        "image_fU3XBT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Haribo_brandlogo2.jpg",
+            "url": "shopify://collections/root-category-brands-haribo"
+          }
+        },
+        "image_Jnhrei": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PEZ_brandlogo1.jpg",
+            "url": "shopify://collections/root-category-all-candy-pez-dispensers"
+          }
+        },
+        "image_4VT9Ab": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Charms_brandlogo2.jpg",
+            "url": "shopify://collections/root-category-brands-charms-candy"
+          }
+        },
+        "image_D3cDgN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/M_M_brandlogo1.jpg",
+            "url": "shopify://collections/root-category-all-candy-candy-bars-m-ms"
+          }
+        },
+        "image_wcHXEV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Claeys_brandlogo2.jpg",
+            "url": "shopify://collections/root-category-brands-claeys-candy"
+          }
+        },
+        "image_gE4q3w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TootsieRoll_brandlogo1.jpg",
+            "url": "shopify://collections/root-category-all-candy-bulk-candy-tootsie-rolls"
+          }
+        },
+        "image_CyjATM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Goetze_s_brandlogo2.jpg",
+            "url": "shopify://collections/root-category-brands-goetzes-candy"
+          }
+        }
+      },
+      "block_order": [
+        "image_3xyk99",
+        "image_9dwQa7",
+        "image_ycUMkC",
+        "image_fU3XBT",
+        "image_Jnhrei",
+        "image_4VT9Ab",
+        "image_D3cDgN",
+        "image_wcHXEV",
+        "image_gE4q3w",
+        "image_CyjATM"
+      ],
+      "settings": {
+        "heading": "Our Favorite Retro Brands"
+      }
+    },
+    "1721107560f45ca541": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_VyVGQh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_VyVGQh"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "include_margins": true
+      }
+    },
+    "two_column_section_BdDKHx": {
+      "type": "two-column-section",
+      "blocks": {
+        "image_cDEgfd": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Conceierge_banner_desktop_newsite_68fa1a09-a237-4b9a-9abb-1650d9cc2e4a.jpg",
+            "m_image": "shopify://shop_images/Conceierge_banner__mobile2.jpg",
+            "button_link": "shopify://pages/candy-concierge-program",
+            "button_text": "candy concierge"
+          }
+        },
+        "image_4tCcVT": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Aboutus_banner_newsite_038f8861-cc4b-43fe-8583-614e618ef384.jpg",
+            "m_image": "shopify://shop_images/CF_aboutus_Banner_mobile2.jpg",
+            "button_link": "shopify://pages/about-us",
+            "button_text": "ABOUT us"
+          }
+        }
+      },
+      "block_order": [
+        "image_cDEgfd",
+        "image_4tCcVT"
+      ],
+      "settings": {}
+    },
+    "two_column_with_head_JFPyAy": {
+      "type": "two-column-with-head",
+      "blocks": {
+        "image_4YJgEx": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/whatsnew_banner_newsize_a9e375ef-7514-46e5-a0ca-c16ff4ed8793.jpg",
+            "m_image": "shopify://shop_images/whatsnew_banner_mobile_new.jpg",
+            "button_link": "shopify://blogs/blog/new-candy-snacks-2023",
+            "button_text": ""
+          }
+        },
+        "image_BtWTPw": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Blog_banner_newsize.jpg",
+            "m_image": "shopify://shop_images/Blog_banner_mobile_new.jpg",
+            "button_link": "shopify://blogs/blog",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4YJgEx",
+        "image_BtWTPw"
+      ],
+      "settings": {
+        "heading": "Sweet Information"
+      }
+    }
+  },
+  "order": [
+    "collage_frpKnf",
+    "home_banner_XKCt8V",
+    "3643d38b-24f2-4040-ab67-4b4b44a63aab",
+    "50b03afc-6c7a-4252-94c2-7579c9d3b3ee",
+    "image_slider_w7dDE3",
+    "1721107560f45ca541",
+    "two_column_section_BdDKHx",
+    "two_column_with_head_JFPyAy"
+  ]
+}

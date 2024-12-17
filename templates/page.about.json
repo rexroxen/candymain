@@ -1,0 +1,453 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "94a50e02-c7cb-4f8e-8809-f281c98044d2": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_hMhDYN": {
+          "type": "heading",
+          "settings": {
+            "font_size_desktop": 50,
+            "font_size_mobile": 30,
+            "heading_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_hMhDYN"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 100,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "image_overlay_opacity": 0
+      }
+    },
+    "aad2a20b-3385-48aa-9079-393f0f4a6ad5": {
+      "type": "collage",
+      "blocks": {
+        "text_NUpXrX": {
+          "type": "text",
+          "settings": {
+            "heading": "Include text details",
+            "heading_size": 30,
+            "text": "Use text paired with images or videos to create a captivating brand story, explain details of your products, or highlight store promotions.",
+            "text_alignment": "left",
+            "button_label": "",
+            "url": "",
+            "desktop_position": "md-min-align-center md-min-justify-center",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#262428"
+          }
+        },
+        "template--14773137178694__aad2a20b-3385-48aa-9079-393f0f4a6ad5-1686321770f98f078e-5": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 18,
+            "button_label": "",
+            "url": "",
+            "desktop_position": "md-min-align-center md-min-justify-center",
+            "mobile_position": "md-max-align-center md-max-justify-center",
+            "text_color": "#262428",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#262428",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "text_NUpXrX",
+        "template--14773137178694__aad2a20b-3385-48aa-9079-393f0f4a6ad5-1686321770f98f078e-5"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_padding_bottom": 0,
+        "remove_spacing": false,
+        "section_width": "content",
+        "width_1": "2",
+        "height_1": "2",
+        "width_2": "2",
+        "height_2": "2",
+        "width_3": "3",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "6",
+        "block_alignment": "center",
+        "color_scheme": "white"
+      }
+    },
+    "collage_builder_VhgbiA": {
+      "type": "collage",
+      "blocks": {
+        "image_4w88HU": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "heading_size": 30,
+            "button_label": "",
+            "url": "",
+            "desktop_position": "md-min-align-top md-min-justify-left",
+            "mobile_position": "md-max-align-top md-max-justify-left",
+            "text_color": "#262428",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#262428",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "text_4RCgR3": {
+          "type": "text",
+          "settings": {
+            "heading": "Include text details",
+            "heading_size": 30,
+            "text": "Use text paired with images or videos to create a captivating brand story, explain details of your products, or highlight store promotions.",
+            "text_alignment": "left",
+            "button_label": "",
+            "url": "",
+            "desktop_position": "md-min-align-center md-min-justify-center",
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "button_color": "#e6e5e7",
+            "button_background_color": "#262428"
+          }
+        }
+      },
+      "block_order": [
+        "image_4w88HU",
+        "text_4RCgR3"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_padding_top": 30,
+        "remove_spacing": false,
+        "section_width": "content",
+        "width_1": "2",
+        "height_1": "2",
+        "width_2": "2",
+        "height_2": "2",
+        "width_3": "3",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "4",
+        "block_alignment": "center",
+        "color_scheme": "white"
+      }
+    },
+    "text_rich_text_DWe4Um": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_wBMwKm": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h4><strong>RICH TEXT</strong></h4>",
+            "text_size": 18
+          }
+        },
+        "richtext_pPAFiU": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h2>Heading</h2>",
+            "text_size": 22
+          }
+        },
+        "richtext_p6XfDE": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.</p>",
+            "text_size": 14
+          }
+        },
+        "button_jkifHR": {
+          "type": "button",
+          "settings": {
+            "button_link": "shopify://collections/all",
+            "button_text": "Button"
+          }
+        }
+      },
+      "block_order": [
+        "richtext_wBMwKm",
+        "richtext_pPAFiU",
+        "richtext_p6XfDE",
+        "button_jkifHR"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "text_alignment_desktop": "left",
+        "text_alignment_mobile": "left",
+        "colors": "light"
+      }
+    },
+    "main": {
+      "type": "template--page",
+      "disabled": true,
+      "settings": {
+        "page_title_enabled": true,
+        "page_width": "narrow"
+      }
+    },
+    "scrolling_banner_xkxAUY": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "image_Qjffq3": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        },
+        "image_Lyt3DK": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        },
+        "image_DLtQt6": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        },
+        "image_76kPdj": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        },
+        "image_V48hYc": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        },
+        "image_4ccJmq": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 60,
+            "height_mobile": 60
+          }
+        }
+      },
+      "block_order": [
+        "image_Qjffq3",
+        "image_Lyt3DK",
+        "image_DLtQt6",
+        "image_76kPdj",
+        "image_V48hYc",
+        "image_4ccJmq"
+      ],
+      "settings": {
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 60,
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "space_between_blocks_desktop": 17,
+        "space_between_blocks_mobile": 20,
+        "rotate": "0",
+        "color_scheme": "accent"
+      }
+    },
+    "text_rich_text_GRRiqh": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_9RTBnn": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h4>RICH TEXT</h4>",
+            "text_size": 18
+          }
+        },
+        "richtext_pVKEnx": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h2>HEADING</h2>",
+            "text_size": 22
+          }
+        },
+        "richtext_9RWTV9": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.</p>",
+            "text_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "richtext_9RTBnn",
+        "richtext_pVKEnx",
+        "richtext_9RWTV9"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "text_alignment_desktop": "left",
+        "text_alignment_mobile": "left",
+        "colors": "dark"
+      }
+    },
+    "video_video_cC7zzj": {
+      "type": "video",
+      "settings": {
+        "title": "Video",
+        "url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "autoplay": false,
+        "loop": false,
+        "mute": false,
+        "video_overlay_opacity": 50,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "width_classes": 75,
+        "colors": "accent"
+      }
+    },
+    "video_video_hero_zJk3Lk": {
+      "type": "video-hero",
+      "settings": {
+        "url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "title": "",
+        "subheading": "",
+        "textAlignment": "center",
+        "textShadow": false,
+        "heading--text-size": 50,
+        "subheading--text-size": 24,
+        "link": "",
+        "button_label": "",
+        "desktopHeight": "450",
+        "mobileHeight": "250",
+        "textColor": "#262428",
+        "button-text": "#ffffff",
+        "button-background": "#262428"
+      }
+    },
+    "template_product_info_columns_a7nYHE": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "image_and_text_Y6cxkR": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "image_and_text_H4pCdd": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "image_and_text_c9mKHQ": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_and_text_Y6cxkR",
+        "image_and_text_H4pCdd",
+        "image_and_text_c9mKHQ"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "columns_per_row": 3,
+        "text_alignment": "left",
+        "vertical_alignment": "top",
+        "colors": "white"
+      }
+    },
+    "accordion_LcJWfw": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_46jKHV": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_TKkUaX": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        },
+        "tab_content_mbHYwa": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "text": "<p>Here you can place an explanation or answer to the question.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_46jKHV",
+        "tab_content_TKkUaX",
+        "tab_content_mbHYwa"
+      ],
+      "settings": {
+        "title": "Frequently asked questions",
+        "faq_icon": "plus_minus",
+        "colors": "light"
+      }
+    }
+  },
+  "order": [
+    "94a50e02-c7cb-4f8e-8809-f281c98044d2",
+    "aad2a20b-3385-48aa-9079-393f0f4a6ad5",
+    "collage_builder_VhgbiA",
+    "text_rich_text_DWe4Um",
+    "main",
+    "scrolling_banner_xkxAUY",
+    "text_rich_text_GRRiqh",
+    "video_video_cC7zzj",
+    "video_video_hero_zJk3Lk",
+    "template_product_info_columns_a7nYHE",
+    "accordion_LcJWfw"
+  ]
+}
